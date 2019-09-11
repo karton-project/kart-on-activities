@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet"
+    href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid="" id="" title="Piksel ve Renk" environment="web" feedback-link="">
+
+    <google-codelab-step label="Piksel ve Renk" duration="0">
+
+      <p>Pikseller, dijital görüntülerde, bir renk ile dolu en küçük karedir. Pikseller, gözlerimiz ile gördüğümüz
+        dünyayı, sınırlı renk ve sınırlı yüzeye aktarmak için bizim oluşturduğumuz bir birimdir. Nasıl mı?</p>
+      <p>Dışaırda bir ördek gördük diyelim.</p>
+      <p class="image-container"><img style="width: 796.78px" src="img\553af7534cd1a28b.png"></p>
+      <p>Bu ördeği sadece aşağıdaki renkleri kullanarak,</p>
+      <p class="image-container"><img style="width: 505.22px" src="img\89947f0815d0e845.png"></p>
+      <p>Aşağıdaki sınırlı sayıda kareleri, her bir kareye sadece tek renk düşecek şekilde çizmenizi istediler:</p>
+      <p class="image-container"><img style="width: 491.65px" src="img\ce8160c53b5dd1f4.png"></p>
+      <p>Sonuç aşağıdakine benzer bir ördek olabilir:</p>
+      <p class="image-container"><img style="width: 326.56px" src="img\926d72e5f08cd1d5.png"></p>
+      <p>Doldurduğun her bir tek renk kare, bir pikseldir. Bilgisayar ekranları her bir pikselin arkasında bir adet LED
+        ampül bulundurur. LED ampüllerin renklerini değiştirerek, farklı resimleri gösterebilir.</p>
+      <p>Resimlerin, bilgisayarda piksel olarak depolandığını öğrendik. Peki, pikselleri oluşturan renkler nasıl
+        depolanır?</p>
+      <p class="image-container"><img style="width: 300.00px" src="img\714cf9a05af8efd9.png"></p>
+      <p>Işık üç ana renkten oluşur: kırmızı, yeşil ve mavi.</p>
+      <p>Bu üç ana rengi karıştırarak, istediğimiz tüm renkleri elde edebiliriz.</p>
+      <p>Işığın bu özelliğinden yararlanarak, bilgisayar bilimciler renkleri depolamanın sayısal bir yolunu bulmuşlar.
+      </p>
+      <h2 is-upgraded><strong>Renklerin Sayısal Sunumu: Kırmızı, Yeşil, Mavi</strong></h2>
+      <ul>
+        <li>Üç ana renk 0 ile 255 arası bir değer alır. Bu değerleri, bir el fenerinin parlaklığı gibi düşünebilirsin.
+          Eğer değer 0 ise el feneri kapalıdır, eğer değer 255 ise el feneri sonuna kadar açıktır.</li>
+        <li>Üç ana değerin 0 ile 255 arasında değişen değerleri birleşerek tek bir değer olarak depolanır.</li>
+      </ul>
+      <p><strong>Örneğin:</strong></p>
+      <ul>
+        <li><strong>Saf Kırmızı:</strong> K: 255 Y: 0 M: 0 değerleri ile ifade edilir. Çünkü saf kırmızı, kırmızı
+          dışında hiçbir ışığı içermez.</li>
+        <li><strong>Turuncu:</strong> K: 255 Y:125 M: 0 ile ifade edilir. Çünkü turuncu rengin içinde biraz yeşil de
+          vardır.</li>
+      </ul>
+      <p>Mobil app aktivitesini açarak aşağıdaki kutucuklara karşılık gelebilecek değerleri bulalım:</p>
+      <p>Bulduğunuz oranları arkadaşlarınızla karşılaştırın. Oranlar arasında bir farklılık var mı?</p>
+      <h2 is-upgraded><strong>Renklerin Bir Başka Sunumu: Ton, Doyum, Işık</strong></h2>
+      <p>Bu sunumda, Kırmızı, Yeşil ve Mavi bir çember boyunca yayılır. Çemberin içine doğru renklerin doygunluğu azalır
+        ve beyaza yakınlaşır. Bu çemberden aşağı doğru inildikçe, yani ters bir koninin tepe noktasına doğru ilerledikçe
+        parlaklık azalır ve siyaha yakınlaşır.</p>
+      <p class="image-container"><img style="width: 277.00px" src="img\d1e3e7d52053be7.png"></p>
+
+
+    </google-codelab-step>
+
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+
+</body>
+
+</html>
