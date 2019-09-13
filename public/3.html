@@ -6,11 +6,10 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <meta name="theme-color" content="#4F7DC9">
   <meta charset="UTF-8">
-  <title></title>
-  <link rel="stylesheet"
-    href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
-  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <title>Piksel ve Renk</title>
+  <link rel="stylesheet" href="./libraries/codelab/fonts.css">
+  <link rel="stylesheet" href="./libraries/codelab/icon.css">
+  <link rel="stylesheet" href="./libraries/codelab/codelab-elements.css">
   <style>
     .success {
       color: #1e8e3e;
@@ -21,6 +20,7 @@
     }
   </style>
 </head>
+
 
 <body>
   <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
@@ -73,10 +73,15 @@
 
   </google-codelab>
 
-  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
-  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
-  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
-  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="./libraries/codelab/native-shim.js"></script>
+  <script src="./libraries/codelab/custom-elements.min.js"></script>
+  <script src="./libraries/codelab/prettify.js"></script>
+  <script src="./libraries/codelab/codelab-elements.js"></script>
+
+  <script>
+    document.getElementById('done').href = 'javascript:Android.openHomePage();'
+    document.getElementById('arrow-back').href = 'javascript:Android.openHomePage();'
+  </script>
 
 </body>
 
