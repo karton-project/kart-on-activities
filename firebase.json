@@ -1,6 +1,9 @@
 {
   "hosting": {
     "public": "public",
+    "projects": {
+      "default": "codenotesalpay"
+    },
     "ignore": [
       "firebase.json",
       "**/.*",
