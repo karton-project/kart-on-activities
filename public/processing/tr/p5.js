@@ -15395,28 +15395,28 @@ var p5 = _dereq_('../core/core');
 p5.prototype.deviceOrientation = undefined;
 
 /**
- * The system variable accelerationx always contains the acceleration of the
+ * The system variable ivmex always contains the acceleration of the
  * device along the x axis. Value is represented as meters per second squared.
  *
- * @property accelerationx
+ * @property ivmex
  */
-p5.prototype.accelerationx = 0;
+p5.prototype.ivmex = 0;
 
 /**
- * The system variable accelerationy always contains the acceleration of the
+ * The system variable ivmey always contains the acceleration of the
  * device along the y axis. Value is represented as meters per second squared.
  *
- * @property accelerationy
+ * @property ivmey
  */
-p5.prototype.accelerationy = 0;
+p5.prototype.ivmey = 0;
 
 /**
- * The system variable accelerationz always contains the acceleration of the
+ * The system variable ivmez always contains the acceleration of the
  * device along the z axis. Value is represented as meters per second squared.
  *
- * @property accelerationz
+ * @property ivmez
  */
-p5.prototype.accelerationz = 0;
+p5.prototype.ivmez = 0;
 
 /**
  * The system variable pAccelerationX always contains the acceleration of the
@@ -15451,9 +15451,9 @@ p5.prototype.pAccelerationZ = 0;
  * @private
  */
 p5.prototype._updatePAccelerations = function(){
-  this._setProperty('pAccelerationX', this.accelerationx);
-  this._setProperty('pAccelerationY', this.accelerationy);
-  this._setProperty('pAccelerationZ', this.accelerationz);
+  this._setProperty('pAccelerationX', this.ivmex);
+  this._setProperty('pAccelerationY', this.ivmey);
+  this._setProperty('pAccelerationZ', this.ivmez);
 };
 
 /**
@@ -15823,7 +15823,7 @@ p5.prototype.setShakeThreshold = function(val){
 
 /**
  * The deviceShaken() function is called when the device total acceleration
- * changes of accelerationx and accelerationy values is more than
+ * changes of ivmex and ivmey values is more than
  * the threshold value. The default threshold is set to 30.
  * @method deviceShaken
  * @example
@@ -15860,9 +15860,9 @@ p5.prototype._ondeviceorientation = function (e) {
 };
 p5.prototype._ondevicemotion = function (e) {
   this._updatePAccelerations();
-  this._setProperty('accelerationx', e.acceleration.x * 2);
-  this._setProperty('accelerationy', e.acceleration.y * 2);
-  this._setProperty('accelerationz', e.acceleration.z * 2);
+  this._setProperty('ivmex', e.acceleration.x * 2);
+  this._setProperty('ivmey', e.acceleration.y * 2);
+  this._setProperty('ivmez', e.acceleration.z * 2);
   this._handleMotion();
 };
 p5.prototype._handleMotion = function() {
@@ -15875,9 +15875,9 @@ p5.prototype._handleMotion = function() {
   }
   var deviceMoved = this.deviceMoved || window.deviceMoved;
   if (typeof deviceMoved === 'function') {
-    if (Math.abs(this.accelerationx - this.pAccelerationX) > move_threshold ||
-      Math.abs(this.accelerationy - this.pAccelerationY) > move_threshold ||
-      Math.abs(this.accelerationz - this.pAccelerationZ) > move_threshold) {
+    if (Math.abs(this.ivmex - this.pAccelerationX) > move_threshold ||
+      Math.abs(this.ivmey - this.pAccelerationY) > move_threshold ||
+      Math.abs(this.ivmez - this.pAccelerationZ) > move_threshold) {
       deviceMoved();
     }
   }
@@ -15954,8 +15954,8 @@ p5.prototype._handleMotion = function() {
     var accelerationChangeY;
     // Add accelerationChangeZ if acceleration change on Z is needed
     if (this.pAccelerationX !== null) {
-      accelerationChangeX = Math.abs(this.accelerationx - this.pAccelerationX);
-      accelerationChangeY = Math.abs(this.accelerationy - this.pAccelerationY);
+      accelerationChangeX = Math.abs(this.ivmex - this.pAccelerationX);
+      accelerationChangeY = Math.abs(this.ivmey - this.pAccelerationY);
     }
     if (accelerationChangeX + accelerationChangeY > shake_threshold) {
       deviceShaken();
@@ -16682,8 +16682,8 @@ p5.prototype._updateNextMouseCoords = function(e) {
   if(e.type === 'touchstart' ||
      e.type === 'touchmove' ||
      e.type === 'touchend' || e.touches) {
-    x = this.touchx;
-    y = this.touchy;
+    x = this.dokunx;
+    y = this.dokuny;
     winX = this.winTouchX;
     winY = this.winTouchY;
   } else if(this._curElement !== null) {
@@ -17106,20 +17106,20 @@ var p5 = _dereq_('../core/core');
 
 /*
  * This is a flag which is false until the first time
- * we receive a touch event. The ptouchx and ptouchy
- * values will match the touchx and touchy values until
+ * we receive a touch event. The pdokunx and pdokuny
+ * values will match the dokunx and dokuny values until
  * this interaction takes place.
  */
 p5.prototype._hasTouchInteracted = false;
 
 /**
- * The system variable touchx always contains the horizontal position of
+ * The system variable dokunx always contains the horizontal position of
  * one finger, relative to (0, 0) of the canvas. This is best used for
  * single touch interactions. For multi-touch interactions, use the
  * touches[] array.
  *
- * @property touchx
- * @method touchx
+ * @property dokunx
+ * @method dokunx
  * @example
  * <div>
  * <code>
@@ -17132,7 +17132,7 @@ p5.prototype._hasTouchInteracted = false;
  *   background(51);
  *   stroke(255, 204, 0);
  *   strokeWeight(4);
- *   rect(touchx, 50, 10, 10);
+ *   rect(dokunx, 50, 10, 10);
  * }
  * </code>
  * </div>
@@ -17141,16 +17141,16 @@ p5.prototype._hasTouchInteracted = false;
  * 10x10 white rect with thick gold outline moves left and right with touch x.
  *
  */
-p5.prototype.touchx = 0;
+p5.prototype.dokunx = 0;
 
 /**
- * The system variable touchy always contains the vertical position of
+ * The system variable dokuny always contains the vertical position of
  * one finger, relative to (0, 0) of the canvas. This is best used for
  * single touch interactions. For multi-touch interactions, use the
  * touches[] array.
  *
- * @property touchy
- * @method touchy
+ * @property dokuny
+ * @method dokuny
  * @example
  * <div>
  * <code>
@@ -17163,7 +17163,7 @@ p5.prototype.touchx = 0;
  *   background(51);
  *   stroke(255, 204, 0);
  *   strokeWeight(4);
- *   rect(50, touchy, 10, 10);
+ *   rect(50, dokuny, 10, 10);
  * }
  * </code>
  * </div>
@@ -17172,25 +17172,25 @@ p5.prototype.touchx = 0;
  * 10x10 white rect with thick gold outline moves up and down with touch y.
  *
  */
-p5.prototype.touchy = 0;
+p5.prototype.dokuny = 0;
 
 /**
- * The system variable ptouchx always contains the horizontal position of
+ * The system variable pdokunx always contains the horizontal position of
  * one finger, relative to (0, 0) of the canvas, in the frame previous to the
  * current frame.
  *
- * @property ptouchx
+ * @property pdokunx
  */
-p5.prototype.ptouchx = 0;
+p5.prototype.pdokunx = 0;
 
 /**
- * The system variable ptouchy always contains the vertical position of
+ * The system variable pdokuny always contains the vertical position of
  * one finger, relative to (0, 0) of the canvas, in the frame previous to the
  * current frame.
  *
- * @property ptouchy
+ * @property pdokuny
  */
-p5.prototype.ptouchy = 0;
+p5.prototype.pdokuny = 0;
 
 /**
  * The system variable winTouchX always contains the horizontal position of
@@ -17245,8 +17245,8 @@ p5.prototype.touches = [];
 p5.prototype.touchIsDown = false;
 
 p5.prototype._updateNextTouchCoords = function(e) {
-  var x = this.touchx;
-  var y = this.touchy;
+  var x = this.dokunx;
+  var y = this.dokuny;
   var winX = this.winTouchX;
   var winY = this.winTouchY;
   if(e.type === 'mousedown' ||
@@ -17271,8 +17271,8 @@ p5.prototype._updateNextTouchCoords = function(e) {
       this._setProperty('touches', touches);
     }
   }
-  this._setProperty('touchx', x);
-  this._setProperty('touchy', y);
+  this._setProperty('dokunx', x);
+  this._setProperty('dokuny', y);
   this._setProperty('winTouchX', winX);
   this._setProperty('winTouchY', winY);
   if (!this._hasTouchInteracted) {
@@ -17283,8 +17283,8 @@ p5.prototype._updateNextTouchCoords = function(e) {
 };
 
 p5.prototype._updateTouchCoords = function() {
-  this._setProperty('ptouchx', this.touchx);
-  this._setProperty('ptouchy', this.touchy);
+  this._setProperty('pdokunx', this.dokunx);
+  this._setProperty('pdokuny', this.dokuny);
   this._setProperty('pwinTouchX', this.winTouchX);
   this._setProperty('pwinTouchY', this.winTouchY);
 };
@@ -17335,7 +17335,7 @@ function getTouchInfo(canvas, e, i) {
  * <div class="norender">
  * <code>
  * function touchStarted() {
- *   ellipse(touchx, touchy, 5, 5);
+ *   ellipse(dokunx, dokuny, 5, 5);
  *   // prevent default
  *   return false;
  * }
@@ -17398,7 +17398,7 @@ p5.prototype._ontouchstart = function(e) {
  * <div class="norender">
  * <code>
  * function touchMoved() {
- *   ellipse(touchx, touchy, 5, 5);
+ *   ellipse(dokunx, dokuny, 5, 5);
  *   // prevent default
  *   return false;
  * }
@@ -17461,7 +17461,7 @@ p5.prototype._ontouchmove = function(e) {
  * <div class="norender">
  * <code>
  * function touchEnded() {
- *   ellipse(touchx, touchy, 5, 5);
+ *   ellipse(dokunx, dokuny, 5, 5);
  *   // prevent default
  *   return false;
  * }

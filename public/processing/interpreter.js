@@ -13,7 +13,7 @@ let p5code =
     "};\n" +
     "draw = function() {\n" +
     " background(200);\n" +
-    " ellipse(mouseX,mouseY,50,50);\n" +
+    " ellipse(mousex,mousey,50,50);\n" +
     " {2}\n" +
     "};";
 
@@ -23,9 +23,11 @@ let variableBlocks = [];
 let setupBlocks = [];
 let drawBlocks = [];
 let condCodeType = 1;
+let debug = true;
+let ct = 3;
 
 function initInterpreter() {
-    window.$.getJSON('./code.json', function (response) {
+    window.$.getJSON('./tr/code.json', function (response) {
         fuse = new Fuse(response, {
             keys: ['title'],
             shouldSort: true
@@ -35,13 +37,26 @@ function initInterpreter() {
 
 function addCodeInput(codeInput, codeType) {
     let parsedText = parse(codeInput);
-    let ct = (typeof codeType !== 'undefined') ? codeType : parsedText[1];
+    ct = (typeof codeType !== 'undefined') ? codeType : parsedText[1];
     if (ct === 1)
         variableBlocks.push(parsedText[0]);
     else if (ct === 2)
         setupBlocks.push(parsedText[0]);
     else if (ct === 3)
         drawBlocks.push(parsedText[0]);
+
+    if(debug) runP5Code();
+}
+
+function undo() {
+    if (ct === 1)
+        variableBlocks.pop();
+    else if (ct === 2)
+        setupBlocks.pop();
+    else if (ct === 3)
+        drawBlocks.pop();
+
+    runP5Code();
 }
 
 function parse(code_text) {
@@ -70,6 +85,8 @@ function parse(code_text) {
             resultCode = resultCode.format(code_sub.substring(code_sub.lastIndexOf(" ") + 1, code_sub.length));
         }
         eval(resultCode);
+    } else if (result[0].input === "call") {
+        resultCode = resultCode.format(code_sub.substring(code_sub.indexOf(":") + 1, code_sub.length).trim().replace(/\s/g, '_'));
     } else if (result[0].input === "cond") {
         condOnProgress = true;
         condCodeType = result[0].code_type;
@@ -94,13 +111,18 @@ function parse(code_text) {
     } else if (result[0].input === "shape") {
         let x_index = code_sub.indexOf("x:");
         let y_index = code_sub.indexOf("y:");
-        let w_index = (code_sub.indexOf("w:") > 0) ? code_sub.indexOf("w:") : code_sub.lastIndexOf("x:");
-        let h_index = (code_sub.indexOf("h:") > 0) ? code_sub.indexOf("h:") : code_sub.lastIndexOf("y:");
         let x = code_sub.substring(x_index + 2, y_index - 1).trim();
-        let y = code_sub.substring(y_index + 2, w_index - 1).trim();
-        let w = code_sub.substring(w_index + 2, h_index - 1).trim();
-        let h = code_sub.substring(h_index + 2, code_sub.length).trim();
-        resultCode = resultCode.format([x,y,w,h]);
+        if (result[0].no_in > 2){
+            let w_index = (code_sub.indexOf("w:") > 0) ? code_sub.indexOf("w:") : code_sub.lastIndexOf("x:");
+            let h_index = (code_sub.indexOf("h:") > 0) ? code_sub.indexOf("h:") : code_sub.lastIndexOf("y:");
+            let y = code_sub.substring(y_index + 2, w_index - 1).trim();
+            let w = code_sub.substring(w_index + 2, h_index - 1).trim();
+            let h = code_sub.substring(h_index + 2, code_sub.length).trim();
+            resultCode = resultCode.format([x,y,w,h]);
+        }else{
+            let y = code_sub.substring(y_index + 2, code_sub.length).trim();
+            resultCode = resultCode.format([x,y]);
+        }
     } else if (result[0].input === "text") {
         code_sub = code_sub.replace(/\s+/g, " ").trim();
         let t_index = code_sub.indexOf(":");
@@ -120,5 +142,6 @@ function runP5Code() {
     var codeP5 = new CodeP5();
     if(!condOnProgress){
         codeP5.runCode();
+        if(debug)  console.log(p5code.format(variableBlocks.join(' '), setupBlocks.join(' '), drawBlocks.join(' ')));
     }
 }
