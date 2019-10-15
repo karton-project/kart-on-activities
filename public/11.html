@@ -1,0 +1,251 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Yönergeler ile Çizim</title>
+  <link rel="stylesheet" href="./libraries/codelab/fonts.css">
+  <link rel="stylesheet" href="./libraries/codelab/icon.css">
+  <link rel="stylesheet" href="./libraries/codelab/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid="" id="" title="Veri Toplama ve Görselleştirme" environment="web" feedback-link="">
+
+    <google-codelab-step label="Veri Toplama ve Görselleştirme" duration="0">
+
+      <p>Bu aktivite, sınıf içinde toplanan farklı verilerin Martı uygulaması ile nasıl ifade edilebileceğini ve nasıl
+        görselleştirilebileceğini öğretecektir. Aktivite boyunca, farklı matematiksel işlemlerin verilerle oynamak için
+        nasıl kullanılacağını ve Martı&#39;daki olası uygulamaları tartışılacaktır.</p>
+      <h2 is-upgraded><strong>Açıklama</strong></h2>
+      <p><strong>Veri</strong>: Bir araştırma sırasında veya bir problem çözümünde kullanılmak üzere toplanmış bilgidir.
+      </p>
+      <table>
+        <tr>
+          <td colspan="1" rowspan="1">
+            <p><strong>Ad</strong></p>
+          </td>
+          <td colspan="1" rowspan="1">
+            <p><strong>Yaş</strong></p>
+          </td>
+          <td colspan="1" rowspan="1">
+            <p><strong>Cinsiyet</strong></p>
+          </td>
+          <td colspan="1" rowspan="1">
+            <p><strong>Favori Renk</strong></p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1" rowspan="1">
+            <p>Ahmet</p>
+          </td>
+          <td colspan="1" rowspan="1">
+            <p>9</p>
+          </td>
+          <td colspan="1" rowspan="1">
+            <p>Erkek</p>
+          </td>
+          <td colspan="1" rowspan="1">
+            <p>Yeşil</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1" rowspan="1">
+            <p>Leyla</p>
+          </td>
+          <td colspan="1" rowspan="1">
+            <p>10</p>
+          </td>
+          <td colspan="1" rowspan="1">
+            <p>Kız</p>
+          </td>
+          <td colspan="1" rowspan="1">
+            <p>Turuncu</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1" rowspan="1">
+            <p>Cansu</p>
+          </td>
+          <td colspan="1" rowspan="1">
+            <p>9</p>
+          </td>
+          <td colspan="1" rowspan="1">
+            <p>Kız</p>
+          </td>
+          <td colspan="1" rowspan="1">
+            <p>Yeşil</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1" rowspan="1">
+            <p>Hakan</p>
+          </td>
+          <td colspan="1" rowspan="1">
+            <p>10</p>
+          </td>
+          <td colspan="1" rowspan="1">
+            <p>Erkek</p>
+          </td>
+          <td colspan="1" rowspan="1">
+            <p>Turuncu</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1" rowspan="1">
+            <p>...</p>
+          </td>
+          <td colspan="1" rowspan="1">
+            <p>...</p>
+          </td>
+          <td colspan="1" rowspan="1">
+            <p>...</p>
+          </td>
+          <td colspan="1" rowspan="1">
+            <p>...</p>
+          </td>
+        </tr>
+      </table>
+      <p>Yukarıdaki tablo, bir sınıfta gerçekleştirilen anket sonucunda toplanan verilerinin bir kısmını göstermektedir.
+        Anketin amacı, sınıftaki öğrencilerin yaş ve cinsiyet dağılımında göre favori renklerindeki trendi göstermektir.
+        Acaba, yaş veya cinsiyetin favori renk seçimine bir tercihi var mıdır, yoksa tamamen alakasız mıdır?</p>
+      <p>Bu tabloya göre cinsiyete göre bir renk farklılığı gözlemlenmemiştir. Ama 9 yaşındaki öğrenciler yeşil rengi
+        tercih ederken, 10 yaşındaki öğrenciler turuncu rengi tercih etmiştir. </p>
+      <p>Ama bu anket sonucuna göre, Türkiye&#39;deki tüm 9 yaşındaki çocuklar yeşil rengi tercih eder diyebilir miyiz?
+        Tabii ki, diyemeyiz. Çünkü, anketi sunduğumuz topluluk hem çok az sayıda hem de birbirine çok yakın bir grup.
+        Bir anketin sonucunun ölçeklenebilir olması için, hem anketin genelleneceği alan için dağınık toplanması hem de
+        sonuçların ölçeklenebilmesini mantıklı kılacak kadar çok kişiye uygulanması gerekmektedir.</p>
+      <p>Bu aktivitede benzer bir tabloyu kendi sınıfımız için dolduracağız. Temel veri operasyonlarını ve farklı veri
+        tiplerinin sonuçlarını yansıtmayı <strong>Martı </strong>uygulaması ile nasıl yapacağımızı öğreneceğiz.</p>
+      <h2 is-upgraded><strong>Başlayalım</strong></h2>
+      <p>Yukarıdaki örnek tabloya benzer bir tabloyu boş bir kağıda çizelim. (Bu aktivitenin sonundaki sayfayı da
+        kullanabilirsin ve &#34;Favori Renk&#34; verisi toplamak yerine &#34;Evcil Hayvan&#34;, &#34;Favori Spor&#34;
+        gibi sınıfın daha çok ilgisini çekebilecek soruları sordurabiliriz).</p>
+      <p>Hazırladığımız tabloyu, sınıftaki tüm öğrenciler için dolduralım.</p>
+      <p>Tablodaki verilere göre değişkenlerimizi tanımlayalım.</p>
+      <p><a href="http://www.wisdomedu.co/marti/interface/main/"
+          target="_blank">http://www.wisdomedu.co/marti/interface/main/</a> web adresini tarayıcımızın adres çubuğuna
+        yazalım. Sayfa açıldığında aşağıdaki arayüzle karşılaşacaksın:</p>
+      <p class="image-container"><img style="width: 624.00px" src="img\90965dc243c18c24.png"></p>
+      <p><strong>Değişken Tanımlama</strong></p>
+      <p>Bu verileri bir değişken kullanarak depolayabiliriz. <strong>Değişken</strong>, sahip olduğumuz verileri bir
+        süreliğine depolamak ve bunu programlama ortamında kullanabilmek için tanımladığımız semboldür. Martı arayüzünde
+        değişken tanımlamak için, değişken tanımla kutusunu, kodlama alanına sürükleyelim. Sınıfın en sevdiği renkleri
+        tanımlamak için &#34;sınıfın renkleri&#34; adlı bir değişken tanımlayalım:</p>
+      <p class="image-container"><img style="width: 624.00px" src="img\f3fad3fd83ef591.png"></p>
+      <p>Yukarıdaki şekilde, örnek tablomuzda olan renkleri değişkene kaydettiğimiz an gösteriliyor. Kaydet butonuna
+        bastığımızda, ekranın alt kısmında bir onaylama metni çıkacak. Bu onaylama kutusunda, tanımlanan değişkenin
+        kaydedildiği söyleniyorsa, her şey yolunda demektir.</p>
+      <p><strong>Tablo Oluşturma</strong></p>
+      <p>Renk verisi ile beraber isim, uğurlu sayı, şehir gibi verileri de kaydetmek istiyorsak ne yapmalıyız?
+        Hazırladığımız anketin tamamını nasıl Martı&#39;ya aktarabiliriz?</p>
+      <p>Bu durumda, bir tablo yapısı oluşturmamız gerekir. Tablo yapısını Martı arayüzü ile oluşturmak istiyorsak,
+        grafik kategorisinden Tablo Oluştur bloğunu kodlama alanına sürükleyelim:</p>
+      <p class="image-container"><img style="width: 624.00px" src="img\5523a1cd0f4ba6f3.png"></p>
+      <p>Tablo oluşturmak istediğimizde, doldurmamız gereken ilk satır tablodaki verilerin ne olduğunu gösteren
+        başlıklardır. Başlıkları ve doldurduğumuz tüm verileri virgül (<strong>,</strong>) ile ayırarak doldurmamız
+        gerekmektedir. Yukarıdaki örnekte, dört kişilik bir grubun, adı, favori renk ve sayıları ve doğdukları şehirler
+        kaydedilmiştir.</p>
+      <p><strong>Farklı Veri Görselleştirme Yöntemleri</strong></p>
+      <p>Uygulayacağımız veri görselleştirme yöntemi, ne tip bir veriyi aktaracağımıza bağlıdır. Örneğin, veri setimizde
+        şehirler varsa, verilerimizi harita üzerinde göstermek mantıklı olabilir. Şehirlere göre, favori renk dağılımını
+        göstermek istiyorsak, bu şehirleri o renge boyayarak, bir bakışta tüm verimizi anlatmış oluruz.</p>
+      <p>Veri görselleştirme doğru kullanıldığında çok güçlü bir araç olabilir. Çünkü, çok uzun okumalar ve analizler
+        gerektiren verilerin hızlıca karşımızdakine aktarılmasını sağlar. Farklı malzemeler ve farklı görselleştirme
+        araçları kullanarak, bu gücü sınıflarımıza da yansıtabiliriz. Öğrencilerin hem yaratıcılıklarını geliştirecek
+        hem de veri bilimini anlatacak afişler hazırlamaları konusunda teşvik edebiliriz.</p>
+      <p>Veri görselleştirmenin bu çeşitliliğini desteklemek adına Martı arayüzü ile başlayarak, farklı
+        görselleştirmeleri farklı materyaller ile nasıl geliştirebileceğimizi de bu aktivitede deneyimleyeceğiz.</p>
+      <p>Öncelikle kedimizi masamızdan yavaşça kaldıralım, eğer kalkmak istemiyorsa başka temiz bir masaya geçelim,</p>
+      <p class="image-container"><img style="width: 342.50px" src="img\3b73ad972216c27f.png"></p>
+      <p>Temel elektronik bilgisi ile başlayalım;</p>
+      <p class="image-container"><img style="width: 302.50px" src="img\8a3d216f2ccc5510.png"></p>
+      <p>Fen bilgisi dersinden hatırlayacağın bu basit devre, elektrik enerjisini sağlayan pil, ışık veren ampül ve
+        ışığın açılıp kapanmasını sağlayan anahtardan oluşur. Yıllara göre değişimi göstermek için kaydırabileceğimiz
+        bir butonu olan elektronik devremiz de tamamen bu şekilden oluşur. Son ürün aşağıdaki gibi çalışacak:</p>
+      <table>
+        <tr>
+          <td colspan="1" rowspan="1">
+            <p class="image-container"><img style="width: 276.50px" src="img\b1e78f7ff2841644.png"></p>
+          </td>
+          <td colspan="1" rowspan="1">
+            <p class="image-container"><img style="width: 263.50px" src="img\803af1c0a6ece46f.png"></p>
+          </td>
+        </tr>
+      </table>
+      <p>Turuncu buton, + uçtan elektriği tamamlayacak bir anahtar görevi görecek, böylece bir zaman aralığı boyunca
+        butonu kaydırdığımızda, boş olan yerlerden geçerken, istediğimiz ışıklar yanacak. </p>
+      <p>Bunun için kağıdın arka kısmına LED ve devremizi devam ettirecek bakır kabloları yapıştıralım:</p>
+      <table>
+        <tr>
+          <td colspan="1" rowspan="1">
+            <p class="image-container"><img style="width: 147.50px" src="img\5b00bb9cf5544c55.png"></p>
+          </td>
+          <td colspan="1" rowspan="1">
+            <p class="image-container"><img style="width: 172.50px" src="img\2847960e741daa2e.png"></p>
+          </td>
+        </tr>
+      </table>
+      <p>Bu basit devreyi, bir ülkedeki bir yıldan itibaren gözlenen değişimler için kullanabiliriz. Peki, sadece bir
+        yıl için değil de, yıllar boyu bir değişimi aktarmak istediğimizde ne yapmalıyız? </p>
+      <p>Örnek bir aktivite olarak, ülkelerin yüzölçümlerine oranla sahip oldukları ormanlık alanlarının yıllara göre
+        değişimini görselleştirelim.</p>
+      <p>(Habitat ve VOYD ortak çalışması ile farklı grupların farklı sürdürülebilirlik hedefleri için infografik
+        tasarımı yaptıkları bir atölye çalışması yapılabilir.)</p>
+      <p><strong>EK: Sınıf içi Veri Toplama Tablosu</strong></p>
+      <table>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+      </table>
+
+
+    </google-codelab-step>
+
+  </google-codelab>
+
+  <script src="./libraries/codelab/native-shim.js"></script>
+  <script src="./libraries/codelab/custom-elements.min.js"></script>
+  <script src="./libraries/codelab/prettify.js"></script>
+  <script src="./libraries/codelab/codelab-elements.js"></script>
+
+  <script>
+    document.getElementById('done').href = 'javascript:Android.openHomePage();'
+    document.getElementById('arrow-back').href = 'javascript:Android.openHomePage();'
+  </script>
+
+</body>
+
+</html>

@@ -35,6 +35,13 @@
     "no_in": 4
   },
   {
+    "title": "üçgen: ",
+    "code": "simpleTriangle({0});",
+    "input": "shape",
+    "code_type": 3,
+    "no_in": 4
+  },
+  {
     "title": "çizgi:",
     "code": "line({0});",
     "input": "shape",

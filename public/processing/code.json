@@ -49,6 +49,13 @@
     "no_in": 4
   },
   {
+    "title": "triangle: ",
+    "code": "simpleTriangle({0});",
+    "input": "shape",
+    "code_type": 3,
+    "no_in": 4
+  },
+  {
     "title": "define function to: ",
     "code": "let {0} = function(){",
     "input": "cond",
