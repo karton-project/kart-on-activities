@@ -11,12 +11,10 @@ let p5code =
     "setup = function() {\n" +
     " var myCanvas = createCanvas(windowWidth,windowHeight);\n" +
     " myCanvas.parent('myContainer');\n" +
-    " fill(255);\n" +
+    " fill(125);\n" +
     " {1}\n" +
     "};\n" +
     "draw = function() {\n" +
-    " background(200);\n" +
-    " ellipse(mousex,mousey,50,50);\n" +
     " {2}\n" +
     "};";
 
@@ -26,7 +24,7 @@ let variableBlocks = [];
 let setupBlocks = [];
 let drawBlocks = [];
 let condCodeType = 1;
-let debug = true;
+let debug = false;
 let ct = 3;
 
 function initInterpreter() {
