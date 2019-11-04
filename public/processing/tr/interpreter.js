@@ -2,8 +2,8 @@ let p5code =
     "{0}\n" +
     "let ghost, asterisk;\n" +
     "preload = function() {\n" +
-    "  ghost = loadAnimation('assets/ghost_standing0001.png', 'assets/ghost_standing0007.png');\n" +
-    "  asterisk = loadAnimation('assets/asterisk_circle0000.png', 'assets/asterisk_circle0002.png');\n" +
+    "  ghost = loadAnimation('../assets/ghost_standing0001.png', '../assets/ghost_standing0007.png');\n" +
+    "  asterisk = loadAnimation('../assets/asterisk_circle0000.png', '../assets/asterisk_circle0002.png');\n" +
     "}\n" +
     "simpleTriangle = function(x,y,w,h){\n" +
     "    triangle(x,y, x+w/2, y-h, x+w, y);\n" +
