@@ -9,7 +9,7 @@ class CodeP5 {
             let s = new Function("p", code);
             this.p5_obj = new p5(s);
             if (soundOn) {
-                eval(getCode());
+                playSong();
             }
         } catch (e) {
             alert(e);

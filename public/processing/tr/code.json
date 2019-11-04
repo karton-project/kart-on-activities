@@ -78,35 +78,35 @@
   },
   {
     "title": "nota:",
-    "code": "addNote('{0}');",
+    "code": "addNote('{0}', 200);",
     "input": "music",
     "code_type": 2,
     "no_in": 1
   },
   {
     "title": "ses: piyano",
-    "code": "selectSample('piano');",
+    "code": "addPiano();",
     "input": "music",
     "code_type": 2,
     "no_in": 0
   },
   {
-    "title": "ses: harmonika",
-    "code": "selectSample('harmonium');",
+    "title": "ses: gitar",
+    "code": "addGuitar();",
     "input": "music",
     "code_type": 2,
     "no_in": 0
   },
   {
-    "title": "ses: çello",
-    "code": "selectSample('cello');",
+    "title": "frekans: düşük",
+    "code": "changeFreq('bass');",
     "input": "music",
     "code_type": 2,
-    "no_in": 0
+    "no_in": 1
   },
   {
-    "title": "frekans: ",
-    "code": "changeOctave('{0}');",
+    "title": "frekans: yüksek",
+    "code": "changeFreq('treble');",
     "input": "music",
     "code_type": 2,
     "no_in": 1

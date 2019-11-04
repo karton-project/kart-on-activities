@@ -133,41 +133,6 @@
     "no_in": 3
   },
   {
-    "title": "note:",
-    "code": "addNote('{0}');",
-    "input": "music",
-    "code_type": 2,
-    "no_in": 1
-  },
-  {
-    "title": "sound: piano",
-    "code": "selectSample('piano');",
-    "input": "music",
-    "code_type": 2,
-    "no_in": 0
-  },
-  {
-    "title": "sound: harmonium",
-    "code": "selectSample('harmonium');",
-    "input": "music",
-    "code_type": 2,
-    "no_in": 0
-  },
-  {
-    "title": "sound: cello",
-    "code": "selectSample('cello');",
-    "input": "music",
-    "code_type": 2,
-    "no_in": 0
-  },
-  {
-    "title": "frequency: ",
-    "code": "changeOctave('{0}');",
-    "input": "music",
-    "code_type": 2,
-    "no_in": 1
-  },
-  {
     "title": "add music",
     "code": "addMusic();",
     "input": "music",
@@ -180,6 +145,41 @@
     "input": "music",
     "code_type": 2,
     "no_in": 0
+  },
+  {
+    "title": "note: ",
+    "code": "addNote('{0}', 200);",
+    "input": "music",
+    "code_type": 2,
+    "no_in": 1
+  },
+  {
+    "title": "sound: piano",
+    "code": "addPiano();",
+    "input": "music",
+    "code_type": 2,
+    "no_in": 0
+  },
+  {
+    "title": "sound: guitar",
+    "code": "addGuitar();",
+    "input": "music",
+    "code_type": 2,
+    "no_in": 0
+  },
+  {
+    "title": "frequency: low",
+    "code": "changeFreq('bass');",
+    "input": "music",
+    "code_type": 2,
+    "no_in": 1
+  },
+  {
+    "title": "frequency: high",
+    "code": "changeFreq('treble');",
+    "input": "music",
+    "code_type": 2,
+    "no_in": 1
   },
   {
     "title": "times:",
