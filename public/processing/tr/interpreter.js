@@ -2,8 +2,8 @@ let p5code =
     "{0}\n" +
     "let ghost, asterisk;\n" +
     "preload = function() {\n" +
-    "  ghost = loadAnimation('../assets/ghost_standing0001.png', '../assets/ghost_standing0007.png');\n" +
-    "  asterisk = loadAnimation('../assets/asterisk_circle0000.png', '../assets/asterisk_circle0002.png');\n" +
+    "  ghost = loadAnimation('assets/ghost_standing0001.png', 'assets/ghost_standing0007.png');\n" +
+    "  asterisk = loadAnimation('assets/asterisk_circle0000.png', 'assets/asterisk_circle0002.png');\n" +
     "}\n" +
     "simpleTriangle = function(x,y,w,h){\n" +
     "    triangle(x,y, x+w/2, y-h, x+w, y);\n" +
@@ -11,6 +11,16 @@ let p5code =
     "setup = function() {\n" +
     " var myCanvas = createCanvas(windowWidth,windowHeight);\n" +
     " myCanvas.parent('myContainer');\n" +
+    "  fill(212);\n" +
+    "  stroke(232);\n" +
+    "  for (var i = 0; i < width; i += 50) {\n" +
+    "    line(i, 0, i, height);\n" +
+    "    text(i, i + 1, 10);\n" +
+    "  }\n" +
+    "  for (var i = 0; i < height; i += 50) {\n" +
+    "    line(0, i, width, i);\n" +
+    "    text(i, 0, i - 1);\n" +
+    "  }\n" +
     " fill(125);\n" +
     " {1}\n" +
     "};\n" +
