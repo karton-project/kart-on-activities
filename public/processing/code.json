@@ -1,213 +1,200 @@
 [
   {
-    "title": "background:",
-    "code": "background({0});",
-    "input": "numeric",
-    "code_type": 2,
-    "no_in": 3
-  },
-  {
-    "title": "background image:",
-    "code": "loadImage({0}, img => { background(img); });",
-    "input": "string",
-    "code_type": 2,
-    "no_in": 1
-  },
-  {
-    "title": "ellipse:",
-    "code": "ellipse({0});",
-    "input": "shape",
-    "code_type": 3,
-    "no_in": 3
-  },
-  {
-    "title": "text:",
-    "code": "textSize({0}); \n text('{1}', {2}, {3});",
-    "input": "text",
-    "code_type": 3,
-    "no_in": 3
-  },
-  {
-    "title": "fill with: ",
+    "title": "doldur",
     "code": "fill({0});",
     "input": "numeric",
     "code_type": 3,
-    "no_in": 1
+    "no_in": 3
   },
   {
-    "title": "line: ",
-    "code": "line({0});",
-    "input": "shape",
+    "title": "arkaplan",
+    "code": "background({0});",
+    "input": "numeric",
     "code_type": 3,
-    "no_in": 4
+    "no_in": 3
   },
   {
-    "title": "rect: ",
-    "code": "rect({0});",
-    "input": "shape",
-    "code_type": 3,
-    "no_in": 4
-  },
-  {
-    "title": "triangle: ",
-    "code": "simpleTriangle({0});",
-    "input": "shape",
-    "code_type": 3,
-    "no_in": 4
-  },
-  {
-    "title": "define function to: ",
-    "code": "let {0} = function(){",
-    "input": "cond",
-    "code_type": 1,
-    "no_in": 1
-  },
-  {
-    "title": "if : ",
-    "code": "if({0}){",
-    "input": "cond",
-    "code_type": 3,
-    "no_in": 1
-  },
-  {
-    "title": "when device shaken",
-    "code": "function deviceShaken() {",
-    "input": "cond",
-    "code_type": 1,
-    "no_in": 0
-  },
-  {
-    "title": "else",
-    "code": "}else{",
-    "input": "cond",
-    "code_type": 3,
-    "no_in": 0
-  },
-  {
-    "title": "end",
-    "code": "}",
-    "input": "end",
-    "code_type": 3,
-    "no_in": 0
-  },
-  {
-    "title": "call : ",
-    "code": "{0}();",
-    "input": "string",
-    "code_type": 3,
-    "no_in": 1
-  },
-  {
-    "title": "create new variable n:",
-    "code": "let {0} = {1};",
-    "input": "variable",
-    "code_type": 1,
-    "no_in": 2
-  },
-  {
-    "title": "increase the value n:",
-    "code": "{0} += {1};",
-    "input": "variable",
-    "code_type": 3,
-    "no_in": 2
-  },
-  {
-    "title": "decrease the value n:",
-    "code": "{0} -= {1};",
-    "input": "variable",
-    "code_type": 3,
-    "no_in": 2
-  },
-  {
-    "title": "change the value n:",
-    "code": "{0} = {1};",
-    "input": "variable",
-    "code_type": 3,
-    "no_in": 2
-  },
-  {
-    "title": "stroke r:",
+    "title": "kenar r:",
     "code": "stroke({0});",
     "input": "numeric",
     "code_type": 3,
     "no_in": 3
   },
   {
-    "title": "add music",
+    "title": "elips:",
+    "code": "ellipse({0});",
+    "input": "shape",
+    "code_type": 3,
+    "no_in": 3
+  },
+  {
+    "title": "dikdörtgen",
+    "code": "rect({0});",
+    "input": "shape",
+    "code_type": 3,
+    "no_in": 4
+  },
+  {
+    "title": "üçgen: ",
+    "code": "simpleTriangle({0});",
+    "input": "shape",
+    "code_type": 3,
+    "no_in": 4
+  },
+  {
+    "title": "çizgi:",
+    "code": "line({0});",
+    "input": "shape",
+    "code_type": 3,
+    "no_in": 4
+  },
+  {
+    "title": "yazı:",
+    "code": "textSize({0}); \n text('{1}', {2}, {3});",
+    "input": "text",
+    "code_type": 3,
+    "no_in": 3
+  },
+  {
+    "title": "hayalet animasyonu:",
+    "code": "animation(ghost, {0});",
+    "input": "shape",
+    "code_type": 3,
+    "no_in": 2
+  },
+  {
+    "title": "müzik ekle",
     "code": "addMusic();",
     "input": "music",
     "code_type": 2,
     "no_in": 0
   },
   {
-    "title": "start loop",
+    "title": "sürekli çal",
     "code": "startLoop();",
     "input": "music",
     "code_type": 2,
     "no_in": 0
   },
   {
-    "title": "note: ",
+    "title": "nota:",
     "code": "addNote('{0}', 200);",
     "input": "music",
     "code_type": 2,
     "no_in": 1
   },
   {
-    "title": "sound: piano",
+    "title": "ses: piyano",
     "code": "addPiano();",
     "input": "music",
     "code_type": 2,
     "no_in": 0
   },
   {
-    "title": "sound: guitar",
+    "title": "ses: gitar",
     "code": "addGuitar();",
     "input": "music",
     "code_type": 2,
     "no_in": 0
   },
   {
-    "title": "frequency: low",
+    "title": "frekans: düşük",
     "code": "changeFreq('bass');",
     "input": "music",
     "code_type": 2,
     "no_in": 1
   },
   {
-    "title": "frequency: high",
+    "title": "frekans: yüksek",
     "code": "changeFreq('treble');",
     "input": "music",
     "code_type": 2,
     "no_in": 1
   },
   {
-    "title": "times:",
-    "code": "for(let i = 0; i < {0}; i++){",
+    "title": "fonksiyon tanımla: ",
+    "code": "let {0} = function(){",
     "input": "cond",
-    "code_type": 2,
+    "code_type": 1,
     "no_in": 1
   },
   {
-    "title": "random number s: e:",
+    "title": "bitir",
+    "code": "};",
+    "input": "end",
+    "code_type": 3,
+    "no_in": 0
+  },
+  {
+    "title": "çağır : ",
+    "code": "{0}();",
+    "input": "call",
+    "code_type": 3,
+    "no_in": 1
+  },
+  {
+    "title": "yeni değişken tanımla",
+    "code": "let {0} = {1};",
+    "input": "variable",
+    "code_type": 1,
+    "no_in": 2
+  },
+  {
+    "title": "değerini artır",
+    "code": "{0} += {1};",
+    "input": "variable",
+    "code_type": 3,
+    "no_in": 2
+  },
+  {
+    "title": "değerini düşür",
+    "code": "{0} -= {1};",
+    "input": "variable",
+    "code_type": 3,
+    "no_in": 2
+  },
+  {
+    "title": "değerini değiştir",
+    "code": "{0} = {1};",
+    "input": "variable",
+    "code_type": 3,
+    "no_in": 2
+  },
+
+  {
+    "title": "eğer : ",
+    "code": "if({0}){",
+    "input": "cond",
+    "code_type": 3,
+    "no_in": 1
+  },
+  {
+    "title": "değilse",
+    "code": "}else{",
+    "input": "cond",
+    "code_type": 3,
+    "no_in": 0
+  },
+  {
+    "title": "döngü",
+    "code": "for(let i = 0; i < {0}; i++){",
+    "input": "cond",
+    "code_type": 3,
+    "no_in": 1
+  },
+  {
+    "title": "rastgele sayı:",
     "code": "random({0})",
     "input": "numeric",
     "code_type": 2,
     "no_in": 2
   },
   {
-    "title": "animated ghost:",
-    "code": "animation(ghost, {0});",
-    "input": "numeric",
-    "code_type": 3,
-    "no_in": 2
-  },
-  {
-    "title": "animated asterisk:",
-    "code": "animation(asterisk, {0});",
-    "input": "numeric",
-    "code_type": 3,
-    "no_in": 2
+    "title": "cihazı sallayınca",
+    "code": "function deviceShaken() {",
+    "input": "cond",
+    "code_type": 1,
+    "no_in": 0
   },
   {
     "title": "",
