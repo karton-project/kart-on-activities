@@ -1,8 +1,7 @@
 let net;
 let webcamElement;
-let trainedClasses = [];
+let buttonColor = 0;
 const classifier = knnClassifier.create();
-var selectedOperation;
 
 async function setupWebcam() {
     webcamElement = document.getElementById('cardClassifierCam');
@@ -37,26 +36,21 @@ async function startClassifier() {
 
     // Reads an image from the webcam and associates it with a specific class
     // index.
-    const addExample = classId => {
-        // Get the intermediate activation of MobileNet 'conv_preds' and pass that
-        // to the KNN classifier.
+    const addExample =  function () {
+        // Get the intermediate activation of MobileNet 'conv_preds' and pass that to the KNN classifier.
         const activation = net.infer(webcamElement, 'conv_preds');
         // Pass the intermediate activation to the classifier.
-        classifier.addExample(activation, classId);
+        classifier.addExample(activation, p5code);
     };
 
     // When clicking a button, add an example for that class.
-    document.getElementById('learn').addEventListener('click', () => {
-        let index = classes.indexOf(selectedOperation);
-        buttonColor[index] = (buttonColor[index] > 100) ? 100 : buttonColor[index] += 5;
-        $('#'+selectedOperation).css('background-color','hsl(145,' + buttonColor[index]  + '%, 50%)');
+    document.getElementById('addInstanceButton').addEventListener('click', () => {
+        buttonColor = (buttonColor > 100) ? 100 : buttonColor += 5;
+        document.getElementById('addInstanceButton').style.backgroundColor = "hsl(145," + buttonColor  + "%, 50%)";
         addExample(index);
-        if(trainedClasses.indexOf(selectedOperation) < 0){
-            trainedClasses.push(selectedOperation);
-        }
     });
 
-    document.getElementById('label').addEventListener('click', () => getClassLabel());
+    document.getElementById('label').addEventListener('click', () => runClassLabel());
 
     window.addEventListener("beforeunload", function (e) {
         model.save('localstorage://mymodel');
@@ -64,16 +58,14 @@ async function startClassifier() {
 
 }
 
-async function getClassLabel() {
+async function runClassLabel() {
     if (classifier.getNumClasses() > 0) {
         // Get the activation from mobilenet from the webcam.
         const activation = net.infer(webcamElement, 'conv_preds');
         // Get the most likely class and confidences from the classifier module.
         const result = await classifier.predictClass(activation);
-
-        appendBlockToCodingHolder(classes[result.classIndex],function(){
-            openBlockDetails(classes[result.classIndex]);
-        });
+        console.log(result.label);
+        runP5Code();
     }
 
     await tf.nextFrame();
