@@ -32,6 +32,11 @@
     <script src="./codeP5.js"></script>
     <script src="./interpreter.js"></script>
     <script src="./sound.js"></script>
+
+    <script defer src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <script defer src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
+    <script defer src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
+    <script defer src="./classifier.js"></script>
     <style>
         html,
         body {
@@ -63,6 +68,14 @@
             width: 80%;
         }
 
+        #saveButton {
+            position: absolute; top:0; right:0; margin:30px;
+        }
+
+        #label {
+            position: absolute; top:30px; right:0; margin:30px;
+        }
+
         /* The Close Button */
         .close {
             color: #aaaaaa;
@@ -83,52 +96,40 @@
 <body>
 <div id="myContainer" width="100%" height="100%"></div>
 
-<video autoplay playsinline muted id="cardClassifierCam" width="224" height="224"></video>
-<button id="myBtn">Open Modal</button>
+<button id="saveButton">Save Function</button>
+<button id="label">Call Function</button>
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-    <!-- Modal content -->
+<div id="saveFunctionModal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
-        <p>Some text in the Modal..</p>
+        <p>Click few times to "Add Instance" button to save the function to an object</p>
+        <video autoplay playsinline muted id="cardClassifierCam" width="224" height="224"></video>
+        <button id="addInstanceButton">Add Instance</button>
     </div>
-
 </div>
 <script>
     initInterpreter();
     runP5Code();
 
-    var modal = document.getElementById("myModal");
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
+    var modal = document.getElementById("saveFunctionModal");
+    var btn = document.getElementById("saveButton");
     var span = document.getElementsByClassName("close")[0];
 
-    // When the user clicks on the button, open the modal
     btn.onclick = function() {
         modal.style.display = "block";
-    }
+        startClassifier();
+    };
 
-    // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
         modal.style.display = "none";
-    }
+    };
 
-    // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
-        if (event.target == modal) {
+        if (event.target === modal) {
             modal.style.display = "none";
         }
-    }
+    };
 </script>
 
 </body>
-<script defer src="https://unpkg.com/@tensorflow/tfjs"></script>
-<script defer src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
-<script defer src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
-<script defer src="./classifier.js"></script>
 </html>
