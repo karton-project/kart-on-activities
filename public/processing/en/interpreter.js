@@ -38,7 +38,7 @@ let debug = false;
 let ct = 3;
 
 function initInterpreter() {
-    window.$.getJSON('./code.json', function (response) {
+    window.$.getJSON('./en/code.json', function (response) {
         fuse = new Fuse(response, {
             keys: ['title'],
             shouldSort: true

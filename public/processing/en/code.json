@@ -1,130 +1,17 @@
-
 [
   {
-    "title": "background:",
-    "code": "background({0});",
-    "input": "numeric",
-    "code_type": 2,
-    "no_in": 3
-  },
-  {
-    "title": "background image:",
-    "code": "loadImage({0}, img => { background(img); });",
-    "input": "string",
-    "code_type": 2,
-    "no_in": 1
-  },
-  {
-    "title": "ellipse:",
-    "code": "ellipse({0});",
-    "input": "shape",
-    "code_type": 3,
-    "no_in": 3
-  },
-  {
-    "title": "text:",
-    "code": "textSize({0}); \n text('{1}', {2}, {3});",
-    "input": "text",
-    "code_type": 3,
-    "no_in": 3
-  },
-  {
-    "title": "fill with: ",
+    "title": "fill r:",
     "code": "fill({0});",
     "input": "numeric",
     "code_type": 3,
-    "no_in": 1
+    "no_in": 3
   },
   {
-    "title": "line: ",
-    "code": "line({0});",
-    "input": "shape",
+    "title": "background r:",
+    "code": "background({0});",
+    "input": "numeric",
     "code_type": 3,
-    "no_in": 4
-  },
-  {
-    "title": "rect: ",
-    "code": "rect({0});",
-    "input": "shape",
-    "code_type": 3,
-    "no_in": 4
-  },
-  {
-    "title": "triangle: ",
-    "code": "simpleTriangle({0});",
-    "input": "shape",
-    "code_type": 3,
-    "no_in": 4
-  },
-  {
-    "title": "define function to: ",
-    "code": "let {0} = function(){",
-    "input": "cond",
-    "code_type": 1,
-    "no_in": 1
-  },
-  {
-    "title": "if : ",
-    "code": "if({0}){",
-    "input": "cond",
-    "code_type": 3,
-    "no_in": 1
-  },
-  {
-    "title": "when device shaken",
-    "code": "function deviceShaken() {",
-    "input": "cond",
-    "code_type": 1,
-    "no_in": 0
-  },
-  {
-    "title": "else",
-    "code": "}else{",
-    "input": "cond",
-    "code_type": 3,
-    "no_in": 0
-  },
-  {
-    "title": "end",
-    "code": "}",
-    "input": "end",
-    "code_type": 3,
-    "no_in": 0
-  },
-  {
-    "title": "call : ",
-    "code": "{0}();",
-    "input": "string",
-    "code_type": 3,
-    "no_in": 1
-  },
-  {
-    "title": "create new variable n:",
-    "code": "let {0} = {1};",
-    "input": "variable",
-    "code_type": 1,
-    "no_in": 2
-  },
-  {
-    "title": "increase the value n:",
-    "code": "{0} += {1};",
-    "input": "variable",
-    "code_type": 3,
-    "no_in": 2
-  },
-  {
-    "title": "decrease the value n:",
-    "code": "{0} -= {1};",
-    "input": "variable",
-    "code_type": 3,
-    "no_in": 2
-  },
-  {
-    "title": "change the value n:",
-    "code": "{0} = {1};",
-    "input": "variable",
-    "code_type": 3,
-    "no_in": 2
+    "no_in": 3
   },
   {
     "title": "stroke r:",
@@ -134,21 +21,63 @@
     "no_in": 3
   },
   {
-    "title": "add music",
+    "title": "ellipse x:",
+    "code": "ellipse({0});",
+    "input": "shape",
+    "code_type": 3,
+    "no_in": 3
+  },
+  {
+    "title": "rectangle x:",
+    "code": "rect({0});",
+    "input": "shape",
+    "code_type": 3,
+    "no_in": 4
+  },
+  {
+    "title": "triangle x:",
+    "code": "simpleTriangle({0});",
+    "input": "shape",
+    "code_type": 3,
+    "no_in": 4
+  },
+  {
+    "title": "line sx:",
+    "code": "line({0});",
+    "input": "shape",
+    "code_type": 3,
+    "no_in": 4
+  },
+  {
+    "title": "text:",
+    "code": "textSize({0}); \n text('{1}', {2}, {3});",
+    "input": "text",
+    "code_type": 3,
+    "no_in": 3
+  },
+  {
+    "title": "ghost animation x:",
+    "code": "animation(ghost, {0});",
+    "input": "shape",
+    "code_type": 3,
+    "no_in": 2
+  },
+  {
+    "title": "start music",
     "code": "addMusic();",
     "input": "music",
     "code_type": 2,
     "no_in": 0
   },
   {
-    "title": "start loop",
+    "title": "play loop",
     "code": "startLoop();",
     "input": "music",
     "code_type": 2,
     "no_in": 0
   },
   {
-    "title": "note: ",
+    "title": "note:",
     "code": "addNote('{0}', 200);",
     "input": "music",
     "code_type": 2,
@@ -169,46 +98,103 @@
     "no_in": 0
   },
   {
-    "title": "frequency: low",
+    "title": "frequency: bass",
     "code": "changeFreq('bass');",
     "input": "music",
     "code_type": 2,
     "no_in": 1
   },
   {
-    "title": "frequency: high",
+    "title": "frequency: treble",
     "code": "changeFreq('treble');",
     "input": "music",
     "code_type": 2,
     "no_in": 1
   },
   {
-    "title": "times:",
-    "code": "for(let i = 0; i < {0}; i++){",
+    "title": "function: ",
+    "code": "let {0} = function(){",
     "input": "cond",
-    "code_type": 2,
+    "code_type": 1,
     "no_in": 1
   },
   {
-    "title": "random number s: e:",
+    "title": "end",
+    "code": "};",
+    "input": "end",
+    "code_type": 3,
+    "no_in": 0
+  },
+  {
+    "title": "call:",
+    "code": "{0}();",
+    "input": "call",
+    "code_type": 3,
+    "no_in": 1
+  },
+  {
+    "title": "define new variable n:",
+    "code": "let {0} = {1};",
+    "input": "variable",
+    "code_type": 1,
+    "no_in": 2
+  },
+  {
+    "title": "increase value of",
+    "code": "{0} += {1};",
+    "input": "variable",
+    "code_type": 3,
+    "no_in": 2
+  },
+  {
+    "title": "decrease value of",
+    "code": "{0} -= {1};",
+    "input": "variable",
+    "code_type": 3,
+    "no_in": 2
+  },
+  {
+    "title": "change value of",
+    "code": "{0} = {1};",
+    "input": "variable",
+    "code_type": 3,
+    "no_in": 2
+  },
+
+  {
+    "title": "if: ",
+    "code": "if({0}){",
+    "input": "cond",
+    "code_type": 3,
+    "no_in": 1
+  },
+  {
+    "title": "else",
+    "code": "}else{",
+    "input": "cond",
+    "code_type": 3,
+    "no_in": 0
+  },
+  {
+    "title": "loop",
+    "code": "for(let i = 0; i < {0}; i++){",
+    "input": "cond",
+    "code_type": 3,
+    "no_in": 1
+  },
+  {
+    "title": "random number:",
     "code": "random({0})",
     "input": "numeric",
     "code_type": 2,
     "no_in": 2
   },
   {
-    "title": "animated ghost:",
-    "code": "animation(ghost, {0});",
-    "input": "numeric",
-    "code_type": 3,
-    "no_in": 2
-  },
-  {
-    "title": "animated asterisk:",
-    "code": "animation(asterisk, {0});",
-    "input": "numeric",
-    "code_type": 3,
-    "no_in": 2
+    "title": "when shake the device",
+    "code": "function deviceShaken() {",
+    "input": "cond",
+    "code_type": 1,
+    "no_in": 0
   },
   {
     "title": "",

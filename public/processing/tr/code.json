@@ -1,13 +1,13 @@
 [
   {
-    "title": "doldur",
+    "title": "doldur r:",
     "code": "fill({0});",
     "input": "numeric",
     "code_type": 3,
     "no_in": 3
   },
   {
-    "title": "arkaplan",
+    "title": "arkaplan r:",
     "code": "background({0});",
     "input": "numeric",
     "code_type": 3,
@@ -21,28 +21,28 @@
     "no_in": 3
   },
   {
-    "title": "elips:",
+    "title": "elips x:",
     "code": "ellipse({0});",
     "input": "shape",
     "code_type": 3,
     "no_in": 3
   },
   {
-    "title": "dikdörtgen",
+    "title": "dikdörtgen x:",
     "code": "rect({0});",
     "input": "shape",
     "code_type": 3,
     "no_in": 4
   },
   {
-    "title": "üçgen: ",
+    "title": "üçgen x:",
     "code": "simpleTriangle({0});",
     "input": "shape",
     "code_type": 3,
     "no_in": 4
   },
   {
-    "title": "çizgi:",
+    "title": "çizgi sx:",
     "code": "line({0});",
     "input": "shape",
     "code_type": 3,
@@ -56,7 +56,7 @@
     "no_in": 3
   },
   {
-    "title": "hayalet animasyonu:",
+    "title": "hayalet animasyonu x:",
     "code": "animation(ghost, {0});",
     "input": "shape",
     "code_type": 3,
@@ -126,14 +126,14 @@
     "no_in": 0
   },
   {
-    "title": "çağır : ",
+    "title": "çağır:",
     "code": "{0}();",
     "input": "call",
     "code_type": 3,
     "no_in": 1
   },
   {
-    "title": "yeni değişken tanımla",
+    "title": "yeni değişken tanımla n:",
     "code": "let {0} = {1};",
     "input": "variable",
     "code_type": 1,

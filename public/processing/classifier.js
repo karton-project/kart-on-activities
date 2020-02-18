@@ -1,6 +1,7 @@
 let net;
 let webcamElement;
 let buttonColor = 0;
+let model;
 const classifier = knnClassifier.create();
 
 async function setupWebcam() {
@@ -21,6 +22,14 @@ async function setupWebcam() {
             reject();
         }
     });
+}
+
+async function loadSavedModel(){
+    model = await tf.loadLayersModel('localstorage://my-model');
+}
+
+async function saveModel(){
+    await model.save('localstorage://my-model');
 }
 
 
@@ -50,11 +59,7 @@ async function startClassifier() {
         addExample(index);
     });
 
-    document.getElementById('label').addEventListener('click', () => runClassLabel());
-
-    window.addEventListener("beforeunload", function (e) {
-        model.save('localstorage://mymodel');
-    }, false);
+    document.getElementById('predict').addEventListener('click', () => runClassLabel());
 
 }
 

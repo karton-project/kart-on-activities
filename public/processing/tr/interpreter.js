@@ -36,9 +36,10 @@ let drawBlocks = [];
 let condCodeType = 1;
 let debug = false;
 let ct = 3;
+let fuse;
 
 function initInterpreter() {
-    window.$.getJSON('./code.json', function (response) {
+    window.$.getJSON('./tr/code.json', function (response) {
         fuse = new Fuse(response, {
             keys: ['title'],
             shouldSort: true

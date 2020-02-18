@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Affordable programming education">
+    <meta name="author" content="Alpay Sabuncuoglu">
+
+    <title>Processing Cards</title>
+
+    <script src="./lib/jquery-3.4.1.min.js"></script>
+
+    <!-- p5.js + highlight -->
+    <script src="./lib/fuse/fuse.js"></script>
+    <script src="./p5.js"></script>
+    <script src="./lib/p5.js/p5.play.js"></script>
+    <script src="./lib/p5.js/p5.sound.min.js"></script>
+
+    <script src="./codeP5.js"></script>
+    <script src="./tr/interpreter.js"></script>
+    <script src="./sound.js"></script>
+
+    <script defer src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <script defer src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
+    <script defer src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
+    <script defer src="./classifier.js"></script>
+    <style>
+        html,
+        body {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0); /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        #defineButton {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 30px;
+        }
+
+        #callButton {
+            position: absolute;
+            top: 30px;
+            right: 0;
+            margin: 30px;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+<script>
+    if (!String.prototype.format) {
+        String.prototype.format = function () {
+            var args = arguments;
+            return this.replace(/{(\d+)}/g, function (match, number) {
+                return typeof args[number] !== 'undefined' ? args[number] : match;
+            });
+        };
+    }
+    initInterpreter();
+    runP5Code();
+</script>
+
+<div id="myContainer" width="100%" height="100%"></div>
+
+<button id="defineButton">Define Function</button>
+<button id="callButton">Call Function</button>
+
+<div id="saveFunctionModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Click few times to "Add Instance" button then save the function to an object</p>
+        <video autoplay playsinline muted id="cardClassifierCam" width="224" height="224"></video>
+        <section id="train">
+            <button id="addInstanceButton">Add Instance</button>
+            <button id="saveModel">Save!</button>
+        </section>
+        <section id="call" style="display:none;">
+            <button id="predict">Call Function</button>
+        </section>
+    </div>
+</div>
+<script>
+    var modal = document.getElementById("saveFunctionModal");
+    var callSection = document.getElementById("call");
+    var trainSection = document.getElementById("train");
+    var defineBtn = document.getElementById("defineButton");
+    var saveBtn = document.getElementById("saveModel");
+    var callBtn = document.getElementById("callButton");
+    var predictBtn = document.getElementById("predict");
+    var span = document.getElementsByClassName("close")[0];
+
+    defineBtn.onclick = function () {
+        modal.style.display = "block";
+        callSection.style.display = "none";
+        trainSection.style.display = "block";
+        startClassifier();
+    };
+
+    saveBtn.onclick = function () {
+      saveModel();
+    };
+
+    predictBtn.onclick = function () {
+      runClassLabel();
+    };
+
+    callBtn.onclick = function () {
+        modal.style.display = "block";
+        callSection.style.display = "block";
+        trainSection.style.display = "none";
+        loadSavedModel();
+    };
+
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    window.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
+</script>
+
+</body>
+</html>
