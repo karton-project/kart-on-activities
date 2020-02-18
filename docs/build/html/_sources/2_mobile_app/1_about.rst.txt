@@ -1,3 +1,3 @@
 ==================================================
-Mobil Uygulamayı Kullanırken
+Using Shared Devices in Classroom
 ==================================================

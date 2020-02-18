@@ -3,26 +3,26 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-**kart-ON ile Programlama Eğitimi**
+**Programming Education with Kart-ON**
 ===========================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Programlama Eğitimine Giriş
+   :caption: An Overview
 
    1_intro/1_about
    1_intro/2_prog_edu
 
 .. toctree:: 
    :maxdepth: 2
-   :caption: Mobil Uygulama
+   :caption: Mobile Application 
 
    2_mobile_app/1_about
    2_mobile_app/2_learn
 
 .. toctree:: 
    :maxdepth: 2
-   :caption: Kart-ON Kartları
+   :caption: Kart-ON Language
 
    3_lang/1_about
    3_lang/2_learn

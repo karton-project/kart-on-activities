@@ -1,3 +1,3 @@
 ==================================================
-Programlama Eğitimi için Öneriler
+Introducing Programming with Kart-ON
 ==================================================

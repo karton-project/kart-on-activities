@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Programlama Eğitimi Hakkında Temel Bilgiler &mdash; karton 1 belgelendirme çalışması</title>
+  <title>Kart-ON Language and Activities &mdash; karton 1 belgelendirme çalışması</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Dizin" href="../genindex.html" />
     <link rel="search" title="Ara" href="../search.html" />
-    <link rel="next" title="Programlama Eğitimi için Öneriler" href="2_prog_edu.html" />
-    <link rel="prev" title="kart-ON ile Programlama Eğitimi" href="../index.html" /> 
+    <link rel="next" title="Introducing Programming with Kart-ON" href="2_prog_edu.html" />
+    <link rel="prev" title="Programming Education with Kart-ON" href="../index.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -78,20 +78,20 @@
               
             
             
-              <p class="caption"><span class="caption-text">Programlama Eğitimine Giriş</span></p>
+              <p class="caption"><span class="caption-text">An Overview</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Programlama Eğitimi Hakkında Temel Bilgiler</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_prog_edu.html">Programlama Eğitimi için Öneriler</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Kart-ON Language and Activities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_prog_edu.html">Introducing Programming with Kart-ON</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Mobil Uygulama</span></p>
+<p class="caption"><span class="caption-text">Mobile Application</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../2_mobile_app/1_about.html">Mobil Uygulamayı Kullanırken</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../2_mobile_app/2_learn.html">Mobil Uygulama Tüm Detalar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_mobile_app/1_about.html">Using Shared Devices in Classroom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_mobile_app/2_learn.html">Mobile App</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Kart-ON Kartları</span></p>
+<p class="caption"><span class="caption-text">Kart-ON Language</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../3_lang/1_about.html">Programlama Kartları</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../3_lang/2_learn.html">Programlama Kartları Detayları</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_lang/1_about.html">All Programming Cards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_lang/2_learn.html">Integrating to Curriculum</a></li>
 </ul>
 
             
@@ -137,7 +137,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Programlama Eğitimi Hakkında Temel Bilgiler</li>
+      <li>Kart-ON Language and Activities</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -156,8 +156,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="programlama-egitimi-hakkinda-temel-bilgiler">
-<h1>Programlama Eğitimi Hakkında Temel Bilgiler<a class="headerlink" href="#programlama-egitimi-hakkinda-temel-bilgiler" title="Bu başlığın kalıcı bağlantısı">¶</a></h1>
+  <div class="section" id="kart-on-language-and-activities">
+<h1>Kart-ON Language and Activities<a class="headerlink" href="#kart-on-language-and-activities" title="Bu başlığın kalıcı bağlantısı">¶</a></h1>
+<p>Programming education has become an integral part of the primary school curriculum. However, most programming practices rely heavily on computers and electronics which causes inequalities across contexts with different socioeconomic levels. Kart-ON programming environment introduces a new and convenient way of using tangibles for coding in classrooms. Our programming environment, Kart-ON, is designed as an affordable means to increase collaboration among students and decrease dependency on screen-based interfaces. Kart-ON is a tangible programming language that uses everyday objects such as paper, pen, fabrics as programming objects and employs a mobile phone as the compiler.</p>
+<p>In a classroom setting with Kart-ON, groups of 3 or 4 students have physical cards to be used in solving the given task. The tasks can be drawing a snowman, moving an airplane or simulating the Earth’s orbit. To do so, the children use the card blocks to design an algorithm. After they complete the algorithm for the task, they can request a smartphone or tablet to compile their program and see the digital output.</p>
+<p>Kart-ON uses textit{p5.js}, a JavaScript library for creative coding, to draw shapes and animations. For example, students can animate a simple moving circle, with the following program text:</p>
+<p><code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">|create</span> <span class="pre">variable:</span> <span class="pre">c</span> <span class="pre">init:</span> <span class="pre">0|</span>
+<span class="pre">|background</span> <span class="pre">r:</span> <span class="pre">255,</span> <span class="pre">g:</span> <span class="pre">255,</span> <span class="pre">b:</span> <span class="pre">255|</span>
+<span class="pre">|ellipse</span> <span class="pre">x:</span> <span class="pre">c</span> <span class="pre">y:</span> <span class="pre">20</span> <span class="pre">w:</span> <span class="pre">10</span> <span class="pre">h:</span> <span class="pre">10|</span>
+<span class="pre">|increase</span> <span class="pre">the</span> <span class="pre">value</span> <span class="pre">of:</span> <span class="pre">c</span> <span class="pre">by:</span> <span class="pre">1|</span>
+<span class="pre">`</span></code></p>
+<p>In this program “create variable” command executes once in the setup. As program runs in every frame, the rest of the program executes forever: The value of c will increase, background will be repainted again and the circle will move toward x axis by one pixel. We modified the commands and the structure based on the student needs and best practices from the field cite{Resnick2005}. We developed the language in an iterative way informed through regularly meeting with K4-6 grade students.</p>
+<p>New variables and objects can be defined in two possible ways as seen in Figure ref{fig:function}: (1) They can assign the function to an object (a LEGO brick, a toy or a sketch of the function) or (2) use text in cards to start and end the function definition. We used Tensorflow to learn new objects with transfer learning. With this approach, our system returns %80+ accuracy when 20+ images given for one object class.</p>
+<p>To recognize the text on pre-defined cards, we include Firebase ML Vision to our app, which allows the app to recognize in real-time with good results. After understanding the text, we used a fuzzy-search library to understand the code when the text recognizer returns a text with smaller errors. Additionally, students can use play-dough, fabrics or any other object in their program to represent colors if they are not familiar with the RGB or HSL representation.</p>
 </div>
 
 
@@ -168,10 +180,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="2_prog_edu.html" class="btn btn-neutral float-right" title="Programlama Eğitimi için Öneriler" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="2_prog_edu.html" class="btn btn-neutral float-right" title="Introducing Programming with Kart-ON" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../index.html" class="btn btn-neutral" title="kart-ON ile Programlama Eğitimi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../index.html" class="btn btn-neutral" title="Programming Education with Kart-ON" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
