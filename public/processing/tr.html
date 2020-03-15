@@ -21,11 +21,6 @@
     <script src="./codeP5.js"></script>
     <script src="./tr/interpreter.js"></script>
     <script src="./sound.js"></script>
-
-    <script defer src="https://unpkg.com/@tensorflow/tfjs"></script>
-    <script defer src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
-    <script defer src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
-    <script defer src="./classifier.js"></script>
     <style>
         html,
         body {
@@ -104,66 +99,6 @@
 </script>
 
 <div id="myContainer" width="100%" height="100%"></div>
-
-<button id="defineButton">Define Function</button>
-<button id="callButton">Call Function</button>
-
-<div id="saveFunctionModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Click few times to "Add Instance" button then save the function to an object</p>
-        <video autoplay playsinline muted id="cardClassifierCam" width="224" height="224"></video>
-        <section id="train">
-            <button id="addInstanceButton">Add Instance</button>
-            <button id="saveModel">Save!</button>
-        </section>
-        <section id="call" style="display:none;">
-            <button id="predict">Call Function</button>
-        </section>
-    </div>
-</div>
-<script>
-    var modal = document.getElementById("saveFunctionModal");
-    var callSection = document.getElementById("call");
-    var trainSection = document.getElementById("train");
-    var defineBtn = document.getElementById("defineButton");
-    var saveBtn = document.getElementById("saveModel");
-    var callBtn = document.getElementById("callButton");
-    var predictBtn = document.getElementById("predict");
-    var span = document.getElementsByClassName("close")[0];
-
-    defineBtn.onclick = function () {
-        modal.style.display = "block";
-        callSection.style.display = "none";
-        trainSection.style.display = "block";
-        startClassifier();
-    };
-
-    saveBtn.onclick = function () {
-      saveModel();
-    };
-
-    predictBtn.onclick = function () {
-      runClassLabel();
-    };
-
-    callBtn.onclick = function () {
-        modal.style.display = "block";
-        callSection.style.display = "block";
-        trainSection.style.display = "none";
-        loadSavedModel();
-    };
-
-    span.onclick = function () {
-        modal.style.display = "none";
-    };
-
-    window.onclick = function (event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    };
-</script>
 
 </body>
 </html>
