@@ -1,0 +1,124 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <meta name="theme-color" content="#4F7DC9">
+    <meta charset="UTF-8">
+    <title>Haritalar ve Veri</title>
+    <link rel="stylesheet" href="./libraries/codelab/fonts.css">
+    <link rel="stylesheet" href="./libraries/codelab/icon.css">
+    <link rel="stylesheet" href="./libraries/codelab/codelab-elements.css">
+    <style>
+        .success {
+            color: #1e8e3e;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+
+<body>
+<google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+<google-codelab codelab-gaid="" id="" title="Haritalar ve Veri" environment="web" feedback-link="">
+    <google-codelab-step label="Farklı Harita Tipleri" duration="0">
+
+        <p class="image-container"><img style="width: 624.00px" src="img\24da4cc4c3832e20.png"></p>
+        <p>Yukarıdaki Türkiye haritası, görmeye alışık olduğumuz siyasi ve fiziki haritalardan farklı tasarlanmıştır. Bunun nedeni, farklı bir veri tipini göstermek için oluşturulmasıdır.</p>
+        <p>Siyasi haritalar, ülkenin sınırlarını, şehirleri, ilçelerini ve diğer beşeri özelliklerini göstermek için kullanılır.</p>
+        <p>Fiziki haritalar ise dağları, akarsuları ve diğer coğrafi özellikleri gösterir.</p>
+        <p>Haritalarda gösterilen her bir farklı özellik, farklı bir tarzı yansıtmayı gerektirir. Örneğin, fiziki haritalardaki dağları gösterirken, adını ve yüksekliğini bilmemiz gerekir. Adını haritanın üstünde yazarız, yüksekliğini ise renk değişimi ile belli ederiz.</p>
+        <p>Yukarıdaki haritada ise, farklı müzisyenlerin hangi dağları şarkılarında kullandığını göstermeyi amaçlar.</p>
+
+
+    </google-codelab-step>
+
+    <google-codelab-step label="Haritada Gösterilen Veriler" duration="0">
+
+        <p>
+            <strong>Bu haritadaki müzisyenler için kullanılan detaylara göre haritaya yeni bir müzisyen eklemek istersek, müzisyenler hakkındaki hangi bilgileri vermemiz gerekir?</strong>
+        </p>
+        <p>Yeni bir müzisyeni haritaya eklemek için dört temel özelliği bilmemiz gerekir: </p>
+        <p><em>İsim, Şarkı Adı, Şarkının Çıkış Tarihi, Yer</em></p>
+        <p>Haritalar üzerindeki veri görselleştirme, bir fikri anlatmanın en güçlü yollarından biri haline gelmiştir.</p>
+        <p class="image-container"><img style="width: 500.36px" src="img\c2596dbdec35c5e0.png"><img
+                style="width: 91.50px" src="img\dcb880de0b5993af.png"></p>
+        <p><strong>Yukarıdaki harita hangi değeri gösteriyor olabilir?</strong></p>
+        <p>Bu harita 2016 yılında ülkelerin enerji tüketimlerine göre, yenilenebilir enerjinin oranını gösteriyor. Ülkenin rengi ne kadar koyu ise, yenilenebilir enerjiden o kadar iyi faydalanıyor. Haritanın yanındaki tablo ise, bu renklerin numerik değerlerini gösteriyor. Haritaların tek bakışta, birçok veriyi gösterme gücü, onu en önemli veri görselleştirme araçlarından biri haline getirmiştir.</p>
+        <p>
+            <strong>Şimdi bir bilgisayar gibi davranıp, fiziksel bir haritayı nasıl etkileşimli hale getirebileceğimizi görelim:</strong>
+        </p>
+        <p class="image-container"><img style="width: 302.50px" src="img\f9b0a9bafb4b9626.png"></p>
+        <p>Fen bilgisi dersinden hatırlayacağımız bu basit devre, elektrik enerjisini sağlayan pil, ışık veren ampül ve ışığın açılıp kapanmasını sağlayan anahtardan oluşur. Yıllara göre değişimi göstermek için kaydırabileceğimiz bir butonu olan elektronik devremiz de tamamen bu şekilden oluşur. Son ürün aşağıdaki gibi çalışacak:</p>
+        <table>
+            <tr>
+                <td colspan="1" rowspan="1"><p class="image-container"><img style="width: 276.50px"
+                                                                            src="img\fada4c7e517ae133.png"></p>
+                </td>
+                <td colspan="1" rowspan="1"><p class="image-container"><img style="width: 263.50px"
+                                                                            src="img\811386d3be06af0e.png"></p>
+                </td>
+            </tr>
+        </table>
+        <p>Turuncu buton, + uçtan elektriği tamamlayacak bir anahtar görevi görecek, böylece bir zaman aralığı boyunca butonu kaydırdığımızda, boş olan yerlerden geçerken, istediğimiz ışıklar yanacak. </p>
+        <p>Bunun için kağıdın arka kısmına LED ve devremizi devam ettirecek bakır kabloları yapıştıralım:</p>
+        <table>
+            <tr>
+                <td colspan="1" rowspan="1"><p class="image-container"><img style="width: 147.50px"
+                                                                            src="img\8f033cb5b2a985ab.png"></p>
+                </td>
+                <td colspan="1" rowspan="1"><p class="image-container"><img style="width: 172.50px"
+                                                                            src="img\44a198e6c12b9da6.png"></p>
+                </td>
+            </tr>
+        </table>
+        <p>Bu basit devreyi, bir ülkedeki bir yıldan itibaren gözlenen değişimler için kullanabiliriz. Peki, sadece bir yıl için değil de, yıllar boyu bir değişimi aktarmak istediğimizde ne yapmalıyız? </p>
+        <p>Örnek bir aktivite olarak, ülkelerin yüzölçümlerine oranla sahip oldukları ormanlık alanlarının yıllara göre değişimini görselleştirelim.</p>
+
+
+    </google-codelab-step>
+
+    <google-codelab-step label="Erişilebilirlik Haritası Tasarlamak" duration="0">
+
+        <p>Erişilebilirlik haritası, bir bölgenin fiziksel veya zihinsel engeli bulunan insanların dolaşımına uygun olan veya olmayan yerlerini işaretleyerek, bölgenin erişilebilir alanlarını gösteren haritadır.</p>
+        <p>
+            <strong>Okulumuza giderken, birçok farklı yoldan geçiyoruz. Bu yolların fiziksel bir engeli olan arkadaşımıza ne kadar uygun olduğunu hiç düşündük mü?</strong>
+        </p>
+        <p>Örneğin okulumuza giriş için bir merdiven var ve bu merdivene alternatif olarak bir rampa yapılmadıysa, erişilebilirlik haritasında burayı işaretlememiz gerekir. Böylece, bu haritayı okul yönetimimize sunabilir ve gerekli düzenlemelerin yapılmasını isteyebiliriz.</p>
+        <p class="image-container"><img style="width: 489.50px" src="img\d9c6245215b74159.png"><img
+                style="width: 490.65px" src="img\f73e637812c3cced.png"></p>
+        <p>Erişilebilirlik haritasında bir alanın erişilebilirliği için üç seçeneğimiz var: Tam, Kısmi ve Hiç. Bu üç seçenek dışında daha çok detay eklemek istersen, resim ve notlarını ekleyebilirsin.</p>
+        <p><a href="https://wheelmap.org/" target="_blank">https://wheelmap.org</a></p>
+
+
+    </google-codelab-step>
+
+</google-codelab>
+
+<script src="./libraries/codelab/native-shim.js"></script>
+<script src="./libraries/codelab/custom-elements.min.js"></script>
+<script src="./libraries/codelab/prettify.js"></script>
+<script src="./libraries/codelab/codelab-elements.js"></script>
+
+<script>
+    window.mobileAndTabletcheck = function() {
+        var check = false;
+        (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
+        return check;
+    };
+    if(mobileAndTabletcheck()){
+        document.getElementById('done').href = 'javascript:Android.openHomePage();';
+        document.getElementById('arrow-back').href = 'javascript:Android.openHomePage();';
+    }else {
+        document.getElementById('done').href = 'javascript:window.history.back();';
+        document.getElementById('arrow-back').href = 'javascript:window.history.back();';
+    }
+</script>
+
+</body>
+
+</html>
