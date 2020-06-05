@@ -41,6 +41,13 @@ function undo() {
     runP5Code();
 }
 
+function clearCode() {
+    variableNames = [];
+    variableBlocks = [];
+    setupBlocks = [];
+    drawBlocks = [];
+}
+
 function parse(code_text) {
     let code_sub = "";
     if (code_text.indexOf("\n") > 0) {
@@ -133,7 +140,7 @@ function parse(code_text) {
 
 function runP5Code() {
     if (!condOnProgress) {
-        let code = variableBlocks.join(' ') + "\n" + setupBlocks.join(' ') + "\n" + drawBlocks.join(' ');
+        let code = "(async () => {" + variableBlocks.join(' ') + "\n" + setupBlocks.join(' ') + "\n" + drawBlocks.join(' ') + "})()";
         if (debug) console.log(code);
         eval(code);
     }

@@ -210,7 +210,7 @@ const codeList = [{
     },
     {
         title: "bekle:",
-        code: "frameRate({0});\n",
+        code: "await sleep({0});\n",
         input: "numeric",
         code_type: 2,
         no_in: 1

@@ -1,6 +1,6 @@
-debug = true;
-
 // Draw a Car with Function
+clearCode()
+
 addCodeInput("define function: araba")
 addCodeInput("fill r: 232 g: 103 b: 103")
 addCodeInput("stroke r: 165 g: 165 b: 165")
@@ -16,6 +16,7 @@ addCodeInput("move x: 50 y: 20")
 addCodeInput("end")
 
 // Draw a Cat
+clearCode()
 
 addCodeInput("rect x: 100 y: 150 w: 100 h: 200")
 addCodeInput("fill r: 200 g:100 b:100")
@@ -38,6 +39,7 @@ addCodeInput("line sx: 150 sy: 170 ex: 180 ey: 180")
 addCodeInput("line sx: 150 sy: 170 ex: 170 ey: 190")
 
 // Draw a Grid of Ellipses
+clearCode()
 
 addCodeInput("define variable n: konumx v: 40")
 addCodeInput("define variable n: konumy v: 40")

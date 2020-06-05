@@ -1,6 +1,6 @@
-debug = true;
-
 // Draw a Car with Function
+clearCode()
+
 addCodeInput("fonksiyon tanımla: araba")
 addCodeInput("doldur r: 232 g: 103 b: 103")
 addCodeInput("kenar r: 165 g: 165 b: 165")
@@ -15,7 +15,20 @@ addCodeInput("çağır: araba")
 addCodeInput("ötele x: 50 y: 20")
 addCodeInput("bitir")
 
+runP5Code()
+
+// Call the car function as an animation
+addCodeInput("döngü: 12")
+addCodeInput("arkaplan r: 100 g: 100 b: 100")
+addCodeInput("çağır: araba")
+addCodeInput("ötele x: 50 y: 20")
+addCodeInput("bekle: 1")
+addCodeInput("bitir")
+
+runP5Code()
+
 // Draw a Cat
+clearCode()
 
 addCodeInput("dörtgen x: 100 y: 150 w: 100 h: 200")
 addCodeInput("doldur r: 200 g:100 b:100")
@@ -37,7 +50,10 @@ addCodeInput("çizgi sx: 150 sy: 170 ex: 130 ey: 190")
 addCodeInput("çizgi sx: 150 sy: 170 ex: 180 ey: 180")
 addCodeInput("çizgi sx: 150 sy: 170 ex: 170 ey: 190")
 
+runP5Code()
+
 // Draw a Grid of Ellipses
+clearCode()
 
 addCodeInput("değişken tanımla n: konumx v: 40")
 addCodeInput("değişken tanımla n: konumy v: 40")
@@ -49,3 +65,5 @@ addCodeInput("bitir")
 addCodeInput("değer ata n: konumx v: 40")
 addCodeInput("değerini artır n: konumy v: 50")
 addCodeInput("bitir")
+
+runP5Code()

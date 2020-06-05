@@ -133,7 +133,7 @@ function parse(code_text) {
 
 function runP5Code() {
     if (!condOnProgress) {
-        let code = variableBlocks.join(' ') + "\n" + setupBlocks.join(' ') + "\n" + drawBlocks.join(' ');
+        let code = variableBlocks.join(' ') + "\n async function c101(){\n" + setupBlocks.join(' ') + "\n" + drawBlocks.join(' ') + "\n}\nc101();";
         if (debug) console.log(code);
         eval(code);
     }
