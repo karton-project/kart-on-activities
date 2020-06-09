@@ -1,49 +1,49 @@
 const codeList = [{
         title: "doldur r:",
         code: "fill({0});\n",
-        input: "color-numeric",
+        input: "color",
         code_type: 3,
         no_in: 3
     },
     {
         title: "arkaplan r:",
         code: "background({0});\n",
-        input: "color-numeric",
-        code_type: 2,
+        input: "color",
+        code_type: 3,
         no_in: 3
     },
     {
         title: "kenar r:",
         code: "stroke({0});\n",
-        input: "color-numeric",
+        input: "color",
         code_type: 3,
         no_in: 3
     },
     {
         title: "elips x:",
         code: "ellipse({0});\n",
-        input: "shape-numeric",
+        input: "shape",
         code_type: 3,
         no_in: 3
     },
     {
         title: "dikdörtgen x:",
         code: "rect({0});\n",
-        input: "shape-numeric",
+        input: "shape",
         code_type: 3,
         no_in: 4
     },
     {
         title: "üçgen x:",
         code: "simpleTriangle({0});\n",
-        input: "shape-numeric",
+        input: "shape",
         code_type: 3,
         no_in: 4
     },
     {
         title: "çizgi sx:",
         code: "line({0});\n",
-        input: "shape-numeric",
+        input: "shape",
         code_type: 3,
         no_in: 4
     },
@@ -57,64 +57,15 @@ const codeList = [{
     {
         title: "hayalet animasyonu x:",
         code: "animation(ghost, {0});\n",
-        input: "shape-numeric",
+        input: "shape",
         code_type: 3,
         no_in: 2
-    },
-    {
-        title: "müzik ekle",
-        code: "addMusic();\n",
-        input: "music",
-        code_type: 2,
-        no_in: 0
-    },
-    {
-        title: "sürekli çal",
-        code: "startLoop();\n",
-        input: "music",
-        code_type: 2,
-        no_in: 0
-    },
-    {
-        title: "nota:",
-        code: "addNote('{0}', 200);\n",
-        input: "music",
-        code_type: 2,
-        no_in: 1
-    },
-    {
-        title: "ses: piyano",
-        code: "addPiano();\n",
-        input: "music",
-        code_type: 2,
-        no_in: 0
-    },
-    {
-        title: "ses: gitar",
-        code: "addGuitar();\n",
-        input: "music",
-        code_type: 2,
-        no_in: 0
-    },
-    {
-        title: "frekans: düşük",
-        code: "changeFreq('bass');\n",
-        input: "music",
-        code_type: 2,
-        no_in: 1
-    },
-    {
-        title: "frekans: yüksek",
-        code: "changeFreq('treble');\n",
-        input: "music",
-        code_type: 2,
-        no_in: 1
     },
     {
         title: "fonksiyon tanımla: ",
         code: "let {0} = function(){\n",
         input: "cond",
-        code_type: 1,
+        code_type: 2,
         no_in: 1
     },
     {
@@ -181,6 +132,20 @@ const codeList = [{
         no_in: 1
     },
     {
+        title: "sürekli tekrarı aç",
+        code: "loop()",
+        input: "end",
+        code_type: 3,
+        no_in: 1
+    },
+    {
+        title: "sürekli tekrarı kapat",
+        code: "noLoop()",
+        input: "end",
+        code_type: 3,
+        no_in: 1
+    },
+    {
         title: "rastgele sayı:",
         code: "let {0} = random({1});\n",
         input: "variable",
@@ -191,13 +156,13 @@ const codeList = [{
         title: "cihazı sallayınca",
         code: "function deviceShaken() {\n",
         input: "cond",
-        code_type: 1,
+        code_type: 2,
         no_in: 0
     },
     {
         title: "ötele x:",
         code: "translate({0});\n",
-        input: "shape-numeric",
+        input: "shape",
         code_type: 3,
         no_in: 1
     },
@@ -212,7 +177,7 @@ const codeList = [{
         title: "bekle:",
         code: "await sleep({0});\n",
         input: "numeric",
-        code_type: 2,
+        code_type: 3,
         no_in: 1
     },
     {
