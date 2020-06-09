@@ -1,49 +1,49 @@
 const codeList = [{
         title: "doldur r:",
         code: "fill({0});\n",
-        input: "color",
+        input: "color-numeric",
         code_type: 3,
         no_in: 3
     },
     {
         title: "arkaplan r:",
         code: "background({0});\n",
-        input: "color",
+        input: "color-numeric",
         code_type: 2,
         no_in: 3
     },
     {
         title: "kenar r:",
         code: "stroke({0});\n",
-        input: "color",
+        input: "color-numeric",
         code_type: 3,
         no_in: 3
     },
     {
         title: "elips x:",
         code: "ellipse({0});\n",
-        input: "shape",
+        input: "shape-numeric",
         code_type: 3,
         no_in: 3
     },
     {
         title: "dikdörtgen x:",
         code: "rect({0});\n",
-        input: "shape",
+        input: "shape-numeric",
         code_type: 3,
         no_in: 4
     },
     {
         title: "üçgen x:",
         code: "simpleTriangle({0});\n",
-        input: "shape",
+        input: "shape-numeric",
         code_type: 3,
         no_in: 4
     },
     {
         title: "çizgi sx:",
         code: "line({0});\n",
-        input: "shape",
+        input: "shape-numeric",
         code_type: 3,
         no_in: 4
     },
@@ -57,7 +57,7 @@ const codeList = [{
     {
         title: "hayalet animasyonu x:",
         code: "animation(ghost, {0});\n",
-        input: "shape",
+        input: "shape-numeric",
         code_type: 3,
         no_in: 2
     },
@@ -174,7 +174,7 @@ const codeList = [{
         no_in: 0
     },
     {
-        title: "döngü",
+        title: "tekrarla: ",
         code: "for(let i = 0; i < {0}; i++){\n",
         input: "cond",
         code_type: 3,
@@ -197,7 +197,7 @@ const codeList = [{
     {
         title: "ötele x:",
         code: "translate({0});\n",
-        input: "shape",
+        input: "shape-numeric",
         code_type: 3,
         no_in: 1
     },

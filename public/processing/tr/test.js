@@ -18,6 +18,8 @@ addCodeInput("bitir")
 runP5Code()
 
 // Call the car function as an animation
+clearCode()
+
 addCodeInput("döngü: 12")
 addCodeInput("arkaplan r: 100 g: 100 b: 100")
 addCodeInput("çağır: araba")
@@ -67,3 +69,14 @@ addCodeInput("değerini artır n: konumy v: 50")
 addCodeInput("bitir")
 
 runP5Code()
+
+// Conditionals
+addCodeInput("tekrarla: sürekli")
+addCodeInput("eğer: dokunX > 250")
+addCodeInput("doldur r: 0 g: 0 b: 255")
+addCodeInput("değilse")
+addCodeInput("doldur r: 255 g: 0 b: 0")
+addCodeInput("bitir")
+addCodeInput("ellipse x: 100 y: 100 w: 100 h: 100")
+addCodeInput("bitir")
+

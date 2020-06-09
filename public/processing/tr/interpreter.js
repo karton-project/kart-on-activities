@@ -64,17 +64,36 @@ function parse(code_text) {
     }
     let inputs = [];
     let codeType = condOnProgress ? condCodeType : result[0].item.code_type;
-    if (result[0].item.input === "numeric") {
+    if (result[0].item.input.includes("numeric")) {
         inputs.push(code_sub.match(/\d+/g).map(Number));
-        resultCode = resultCode.format(inputs);
-    } else if (result[0].item.input === "color") {
-        let r_index = code_sub.indexOf("r:");
-        let g_index = code_sub.indexOf("g:");
-        let b_index = code_sub.indexOf("b:");
-        let r = code_sub.substring(r_index + 2, g_index - 1).trim();
-        let g = code_sub.substring(g_index + 2, b_index - 1).trim();
-        let b = code_sub.substring(b_index + 2, code_sub.length).trim();
-        resultCode = resultCode.format([r, g, b]);
+        if (inputs.length === result[0].item.no_in)
+            resultCode = resultCode.format(inputs);
+        else {
+            if (result[0].item.input.includes("color")) {
+                let r_index = code_sub.indexOf("r:");
+                let g_index = code_sub.indexOf("g:");
+                let b_index = code_sub.indexOf("b:");
+                let r = code_sub.substring(r_index + 2, g_index - 1).trim();
+                let g = code_sub.substring(g_index + 2, b_index - 1).trim();
+                let b = code_sub.substring(b_index + 2, code_sub.length).trim();
+                resultCode = resultCode.format([r, g, b]);
+            } else if (result[0].item.input.includes("shape")) {
+                let x_index = code_sub.indexOf("x:");
+                let y_index = code_sub.indexOf("y:");
+                let x = code_sub.substring(x_index + 2, y_index - 1).trim();
+                if (result[0].item.no_in > 2) {
+                    let w_index = (code_sub.indexOf("w:") > 0) ? code_sub.indexOf("w:") : code_sub.lastIndexOf("x:");
+                    let h_index = (code_sub.indexOf("h:") > 0) ? code_sub.indexOf("h:") : code_sub.lastIndexOf("y:");
+                    let y = code_sub.substring(y_index + 2, w_index - 1).trim();
+                    let w = code_sub.substring(w_index + 2, h_index - 1).trim();
+                    let h = code_sub.substring(h_index + 2, code_sub.length).trim();
+                    resultCode = resultCode.format([x, y, w, h]);
+                } else {
+                    let y = code_sub.substring(y_index + 2, code_sub.length).trim();
+                    resultCode = resultCode.format([x, y]);
+                }
+            }
+        }
     } else if (result[0].item.input === "string") {
         let index = code_sub.indexOf(":");
         resultCode = resultCode.format(code_sub.substring(index + 1, code_sub.length).trim());
@@ -93,7 +112,12 @@ function parse(code_text) {
         if (result[0].item.no_in === 0) {
             resultCode = result[0].item.code;
         } else if (result[0].item.no_in === 1) {
-            resultCode = resultCode.format(code_sub.substring(code_sub.indexOf(":") + 1, code_sub.length).trim());
+            let x = code_sub.substring(code_sub.indexOf(":") + 1, code_sub.length).trim();
+            if (x === "sürekli" || x === "surekli") {
+                resultCode = "for(;;){\n";
+            }else {
+                resultCode = resultCode.format(x).trim();
+            }
         }
     } else if (result[0].item.input === "end") {
         resultCode = result[0].item.code;
@@ -108,22 +132,7 @@ function parse(code_text) {
             resultCode = resultCode.format(var_name, code_sub.substring(v_index + 2, code_sub.length));
             variableNames.push(var_name);
         }
-    } else if (result[0].item.input === "shape") {
-        let x_index = code_sub.indexOf("x:");
-        let y_index = code_sub.indexOf("y:");
-        let x = code_sub.substring(x_index + 2, y_index - 1).trim();
-        if (result[0].item.no_in > 2) {
-            let w_index = (code_sub.indexOf("w:") > 0) ? code_sub.indexOf("w:") : code_sub.lastIndexOf("x:");
-            let h_index = (code_sub.indexOf("h:") > 0) ? code_sub.indexOf("h:") : code_sub.lastIndexOf("y:");
-            let y = code_sub.substring(y_index + 2, w_index - 1).trim();
-            let w = code_sub.substring(w_index + 2, h_index - 1).trim();
-            let h = code_sub.substring(h_index + 2, code_sub.length).trim();
-            resultCode = resultCode.format([x, y, w, h]);
-        } else {
-            let y = code_sub.substring(y_index + 2, code_sub.length).trim();
-            resultCode = resultCode.format([x, y]);
-        }
-    } else if (result[0].item.input === "text") {
+    }  else if (result[0].item.input === "text") {
         code_sub = code_sub.replace(/\s+/g, " ").trim();
         let t_index = code_sub.indexOf(":");
         let x_index = code_sub.indexOf("x:");

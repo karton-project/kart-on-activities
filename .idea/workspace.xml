@@ -20,13 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d864c7cd-bff8-4e8e-aaf8-75be132af7ba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/processing/tr/codeP5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/processing/tr/p5.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/processing/universal/codeP5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/processing/universal/p5.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/processing/codeP5.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/processing/codeP5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/processing/en/interpreter.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/processing/en/interpreter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/processing/en/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/processing/en/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/processing/codeP5.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/processing/en/codeP5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/processing/en.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/processing/en.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/processing/p5.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/processing/en/p5.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/processing/tr.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/processing/tr.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/processing/tr/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/processing/tr/code.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/processing/tr/interpreter.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/processing/tr/interpreter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/processing/tr/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/processing/tr/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/processing/universal.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/processing/universal.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +52,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/processing/en" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/processing/tr" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -55,10 +61,13 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/processing/universal" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/processing/tr" />
       <recent name="$PROJECT_DIR$/public/processing/en" />
       <recent name="$PROJECT_DIR$/public/processing" />
-      <recent name="$PROJECT_DIR$/public/processing/tr" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\kart-on-activities\public\learn-p5" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\kart-on-activities\public\processing" />
     </key>
@@ -100,7 +109,9 @@
       <workItem from="1585578691681" duration="16546000" />
       <workItem from="1591178809799" duration="1493000" />
       <workItem from="1591185967635" duration="141000" />
-      <workItem from="1591338570266" duration="12871000" />
+      <workItem from="1591338570266" duration="13213000" />
+      <workItem from="1591685663452" duration="483000" />
+      <workItem from="1591688336644" duration="3852000" />
     </task>
     <servers />
   </component>
@@ -117,11 +128,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="736" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585589691481">
-      <screen x="93" y="0" width="1827" height="1080" />
+    <state x="676" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591688966502">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state x="676" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1591688966502" />
     <state x="736" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/93.0.1827.1080@93.0.1827.1080" timestamp="1585589691481" />
     <state x="786" y="295" key="FileChooserDialogImpl" timestamp="1584863983943">
       <screen x="93" y="0" width="1827" height="1080" />
