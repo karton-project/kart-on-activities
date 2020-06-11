@@ -62,59 +62,10 @@ const codeList = [{
         no_in: 2
     },
     {
-        title: "start music",
-        code: "addMusic();",
-        input: "music",
-        code_type: 2,
-        no_in: 0
-    },
-    {
-        title: "play loop",
-        code: "startLoop();",
-        input: "music",
-        code_type: 2,
-        no_in: 0
-    },
-    {
-        title: "note:",
-        code: "addNote('{0}', 200);",
-        input: "music",
-        code_type: 2,
-        no_in: 1
-    },
-    {
-        title: "sound: piano",
-        code: "addPiano();",
-        input: "music",
-        code_type: 2,
-        no_in: 0
-    },
-    {
-        title: "sound: guitar",
-        code: "addGuitar();",
-        input: "music",
-        code_type: 2,
-        no_in: 0
-    },
-    {
-        title: "frequency: bass",
-        code: "changeFreq('bass');",
-        input: "music",
-        code_type: 2,
-        no_in: 1
-    },
-    {
-        title: "frequency: treble",
-        code: "changeFreq('treble');",
-        input: "music",
-        code_type: 2,
-        no_in: 1
-    },
-    {
         title: "define function: ",
         code: "let {0} = function(){",
         input: "cond",
-        code_type: 1,
+        code_type: 2,
         no_in: 1
     },
     {
@@ -184,23 +135,16 @@ const codeList = [{
     {
         title: "random number:",
         code: "random({0})",
-        input: "numeric",
-        code_type: 2,
+        input: "variable",
+        code_type: 1,
         no_in: 2
     },
     {
         title: "when shake the device",
         code: "function deviceShaken() {",
         input: "cond",
-        code_type: 1,
-        no_in: 0
-    },
-    {
-        title: "",
-        code: "",
-        input: "numeric",
         code_type: 2,
-        no_in: 1
+        no_in: 0
     },
     {
         title: "move x:",
@@ -223,4 +167,11 @@ const codeList = [{
         code_type: 2,
         no_in: 1
     },
-]
+    {
+        title: "",
+        code: "",
+        input: "numeric",
+        code_type: 2,
+        no_in: 1
+    }
+];

@@ -1,7 +1,7 @@
 let condOnProgress = false;
 let variableNames = [];
 let variableBlocks = [];
-let setupBlocks = [];
+let functionBlocks = [];
 let drawBlocks = [];
 let condCodeType = 1;
 let debug = false;
@@ -13,7 +13,7 @@ function initInterpreter() {
         keys: ['title'],
         shouldSort: true,
         includeScore: true
-    }
+    };
     fuse = new Fuse(codeList, fuseOptions);
 }
 
@@ -23,18 +23,18 @@ function addCodeInput(codeInput, codeType) {
     if (ct === 1)
         variableBlocks.push(parsedText[0]);
     else if (ct === 2)
-        setupBlocks.push(parsedText[0]);
+        functionBlocks.push(parsedText[0]);
     else if (ct === 3)
         drawBlocks.push(parsedText[0]);
 
-    if (debug) runP5Code();
+    if(debug) runP5Code();
 }
 
 function undo() {
     if (ct === 1)
         variableBlocks.pop();
     else if (ct === 2)
-        setupBlocks.pop();
+        functionBlocks.pop();
     else if (ct === 3)
         drawBlocks.pop();
 
@@ -132,9 +132,8 @@ function parse(code_text) {
 }
 
 function runP5Code() {
-    if (!condOnProgress) {
-        let code = variableBlocks.join(' ') + "\n async function c101(){\n" + setupBlocks.join(' ') + "\n" + drawBlocks.join(' ') + "\n}\nc101();";
-        if (debug) console.log(code);
-        eval(code);
+    var codeP5 = new CodeP5();
+    if(!condOnProgress){
+        codeP5.runCode();
     }
 }
