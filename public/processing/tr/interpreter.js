@@ -1,12 +1,50 @@
+const p5code =
+    "{0}\n" +
+    "let ghost, asterisk;\n" +
+    "preload = function() {\n" +
+    "  ghost = loadAnimation('assets/ghost_standing0001.png', 'assets/ghost_standing0007.png');\n" +
+    "  asterisk = loadAnimation('assets/asterisk_circle0000.png', 'assets/asterisk_circle0002.png');\n" +
+    "};\n" +
+    "simpleTriangle = function(x,y,w,h){\n" +
+    "    triangle(x,y, x+w/2, y-h, x+w, y);\n" +
+    "};\n" +
+    "gridLines = function(){\n" +
+    "  fill(212);\n" +
+    "  stroke(232);\n" +
+    "  for (var i = 0; i < width; i += 50) {\n" +
+    "    line(i, 0, i, height);\n" +
+    "    text(i, i + 1, 10);\n" +
+    "  }\n" +
+    "  for (var i = 0; i < height; i += 50) {\n" +
+    "    line(0, i, width, i);\n" +
+    "    text(i, 0, i - 1);\n" +
+    "  }\n" +
+    "};\n" +
+    "drawThings = function(){\n" +
+    " {1}\n" +
+    " {2}\n" +
+    "};\n" +
+    "setup = function() {\n" +
+    " var myCanvas = createCanvas(windowWidth,windowHeight);\n" +
+    " myCanvas.parent('myContainer');\n" +
+    " gridLines();\n" +
+    "};\n" +
+    "draw = function() {\n" +
+    " drawThings();\n" +
+    " {3}\n" +
+    "};";
+
 let condOnProgress = false;
 let variableNames = [];
 let variableBlocks = [];
 let functionBlocks = [];
 let drawBlocks = [];
+let loopBlocks = [];
 let condCodeType = 1;
 let debug = false;
 let ct = 3;
 let fuse;
+let inDrawLoop = false;
 
 function initInterpreter() {
     const fuseOptions = {
@@ -20,14 +58,18 @@ function initInterpreter() {
 function addCodeInput(codeInput, codeType) {
     let parsedText = parse(codeInput);
     ct = (typeof codeType !== 'undefined') ? codeType : parsedText[1];
-    if (ct === 1)
-        variableBlocks.push(parsedText[0]);
-    else if (ct === 2)
-        functionBlocks.push(parsedText[0]);
-    else if (ct === 3)
-        drawBlocks.push(parsedText[0]);
+    if (inDrawLoop) {
+        loopBlocks.push(parsedText[0]);
+    } else {
+        if (ct === 1)
+            variableBlocks.push(parsedText[0]);
+        else if (ct === 2)
+            functionBlocks.push(parsedText[0]);
+        else if (ct === 3)
+            drawBlocks.push(parsedText[0]);
+    }
 
-    if(debug) runP5Code();
+    if (debug) runP5Code();
 }
 
 function undo() {
@@ -91,6 +133,8 @@ function parse(code_text) {
     } else if (result[0].item.input === "end") {
         resultCode = result[0].item.code;
         condOnProgress = false;
+    } else if (result[0].item.input === "loop") {
+        inDrawLoop = !inDrawLoop;
     } else if (result[0].item.input === "variable") {
         let n_index = code_sub.indexOf("n:");
         let v_index = code_sub.indexOf("v:");
@@ -132,8 +176,8 @@ function parse(code_text) {
 }
 
 function runP5Code() {
-    var codeP5 = new CodeP5();
-    if(!condOnProgress){
+    let codeP5 = new CodeP5();
+    if (!condOnProgress) {
         codeP5.runCode();
     }
 }

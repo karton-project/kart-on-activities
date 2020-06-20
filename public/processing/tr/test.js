@@ -17,18 +17,6 @@ addCodeInput("bitir");
 
 runP5Code();
 
-// Call the car function as an animation
-clearCode();
-
-addCodeInput("tekrarla: 12");
-addCodeInput("arkaplan r: 100 g: 100 b: 100");
-addCodeInput("çağır: araba");
-addCodeInput("ötele x: 50 y: 20");
-addCodeInput("bekle: 1");
-addCodeInput("bitir");
-
-runP5Code();
-
 // Draw a Cat
 clearCode();
 
@@ -57,16 +45,16 @@ runP5Code();
 // Draw a Grid of Ellipses
 clearCode();
 
-    addCodeInput("değişken tanımla n: konumx v: 40");
-    addCodeInput("değişken tanımla n: konumy v: 40");
-    addCodeInput("tekrarla: 5");
-    addCodeInput("tekrarla: 5");
-    addCodeInput("elips x: konumx y: konumy w: 30 h: 30");
-    addCodeInput("değerini artır n: konumx v: 50");
-    addCodeInput("bitir");
-    addCodeInput("değer ata n: konumx v: 40");
-    addCodeInput("değerini artır n: konumy v: 50");
-    addCodeInput("bitir");
+addCodeInput("değişken tanımla n: konumx v: 40");
+addCodeInput("değişken tanımla n: konumy v: 40");
+addCodeInput("tekrarla: 5");
+addCodeInput("tekrarla: 5");
+addCodeInput("elips x: konumx y: konumy w: 30 h: 30");
+addCodeInput("değerini artır n: konumx v: 50");
+addCodeInput("bitir");
+addCodeInput("değer ata n: konumx v: 40");
+addCodeInput("değerini artır n: konumy v: 50");
+addCodeInput("bitir");
 
 runP5Code();
 
@@ -81,6 +69,6 @@ addCodeInput("ellipse x: 100 y: 100 w: 100 h: 100");
 runP5Code();
 
 // Moving Line
-addCodeInput("çizgi sx: dokunX sy: 0 ex: dokunX ey: 100");
+addCodeInput("doldur r: 0 g: 0 b: 0");
+addCodeInput("çizgi sx: dokunX sy: 0 ex: dokunX ey: height");
 runP5Code();
-

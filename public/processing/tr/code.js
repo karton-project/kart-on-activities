@@ -63,7 +63,7 @@ const codeList = [{
     },
     {
         title: "fonksiyon tanımla: ",
-        code: "let {0} = function(){\n",
+        code: "{0} = function(){\n",
         input: "cond",
         code_type: 2,
         no_in: 1
@@ -132,18 +132,11 @@ const codeList = [{
         no_in: 1
     },
     {
-        title: "sürekli tekrarı aç",
-        code: "loop()",
-        input: "end",
-        code_type: 3,
-        no_in: 1
-    },
-    {
-        title: "sürekli tekrarı kapat",
-        code: "noLoop()",
-        input: "end",
-        code_type: 3,
-        no_in: 1
+        title: "sürekli tekrarı aç/kapat",
+        code: "",
+        input: "loop",
+        code_type: 0,
+        no_in: 0
     },
     {
         title: "rastgele sayı:",
@@ -154,7 +147,7 @@ const codeList = [{
     },
     {
         title: "cihazı sallayınca",
-        code: "function deviceShaken() {\n",
+        code: "deviceShaken = function() {\n",
         input: "cond",
         code_type: 2,
         no_in: 0
