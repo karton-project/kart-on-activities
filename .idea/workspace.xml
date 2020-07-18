@@ -19,14 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d864c7cd-bff8-4e8e-aaf8-75be132af7ba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/processing/tr/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/processing/tr/code.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/processing/tr/codeP5.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/processing/tr/codeP5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/processing/tr/interpreter.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/processing/tr/interpreter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/processing/tr/p5.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/processing/tr/p5.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/processing/tr/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/processing/tr/test.js" afterDir="false" />
-    </list>
+    <list default="true" id="d864c7cd-bff8-4e8e-aaf8-75be132af7ba" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,6 +102,7 @@
       <workItem from="1591869418927" duration="2579000" />
       <workItem from="1592493477528" duration="2508000" />
       <workItem from="1592570243988" duration="2096000" />
+      <workItem from="1593249811914" duration="678000" />
     </task>
     <servers />
   </component>
