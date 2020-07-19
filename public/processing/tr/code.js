@@ -27,7 +27,7 @@ const codeList = [{
         no_in: 3
     },
     {
-        title: "dikdörtgen x:",
+        title: "dörtgen x:",
         code: "rect({0});\n",
         input: "shape",
         code_type: 3,

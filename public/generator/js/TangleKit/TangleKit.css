@@ -1,0 +1,81 @@
+/*
+ *  TangleKit.css
+ *  Tangle 0.1.0
+ *
+ *  Created by Bret Victor on 6/10/11.
+ *  (c) 2011 Bret Victor.  MIT open-source license.
+ *
+ */
+
+
+/* cursor */
+
+.TKCursorDragHorizontal {
+	cursor: pointer;
+	cursor: move;
+	cursor: col-resize;
+}
+
+
+/* TKToggle */
+
+.TKToggle {
+	color: #46f;
+	border-bottom: 1px dashed #46f;
+	cursor: pointer;
+}
+
+
+/* TKAdjustableNumber */
+
+.TKAdjustableNumber {
+	position:relative;
+	display: inline-block;
+	color: #46f;
+	border-bottom: 1px dashed #46f;
+}
+
+.TKAdjustableNumberHover {
+}
+
+.TKAdjustableNumberDown {
+	color: #00c;
+	border-bottom: 1px dashed #00c;
+}
+
+.TKAdjustableNumber .TKAdjustableNumberHelp {
+	visibility: hidden;
+	width: auto;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -60px;
+	opacity: 0;
+	transition: opacity 0.3s;
+	cursor: pointer;
+}
+
+.TKAdjustableNumber .TKAdjustableNumberHelp::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	font: min(4vh, 4vw) "Helvetica-Neue", "Arial", sans-serif;
+	border-color: #555 transparent transparent transparent;
+}
+
+.TKAdjustableNumber:hover .TKAdjustableNumberHelp {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 2s;
+}
+
