@@ -30,6 +30,10 @@ let options = {
     fuseOptions: fuseOptions
 };
 
+function save(){
+
+}
+
 $(document).ready(function () {
     $("#codeNamePicker").fuzzyComplete(codeList, options);
     $("#codeNamePicker").on('keyup blur', function (result) {
@@ -51,9 +55,15 @@ $(document).ready(function () {
                 this.v2 = 35;
             },
             update: function () {
-                this.color = rgbToHex(this.r, this.g, this.b);
-                if (document.getElementById("color") !== null)
-                    document.getElementById("color").style.background = this.color;
+                let colorCode = rgbToHex(this.r, this.g, this.b);
+                if (document.getElementById("color") !== null){
+                    document.getElementById("color").style.background = colorCode;
+                    document.getElementById("color").addEventListener("click", function() {
+                        document.getElementById("c").focus();
+                        document.getElementById("c").value = colorCode;
+                        document.getElementById("c").click();
+                    });
+                }
             }
         });
     });
