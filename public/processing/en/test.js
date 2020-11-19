@@ -1,7 +1,7 @@
 // Draw a Car with Function
 clearCode();
 
-addCodeInput("define function: araba");
+addCodeInput("define function: car");
 addCodeInput("fill r: 232 g: 103 b: 103");
 addCodeInput("stroke r: 165 g: 165 b: 165");
 addCodeInput("rect x:100 y:50 w:150 h:100");
@@ -9,11 +9,13 @@ addCodeInput("ellipse x:125 y:175 w:50 h:50");
 addCodeInput("ellipse x:225 y:175 w:50 h:50");
 addCodeInput("end");
 
-// Call the Car Function with a Loop
-addCodeInput("loop: 12");
-addCodeInput("call: araba");
+// Call the Car Function with a repeat
+addCodeInput("repeat: 12");
+addCodeInput("call: car");
 addCodeInput("move x: 50 y: 20");
 addCodeInput("end");
+
+runP5Code();
 
 // Draw a Cat
 clearCode();
@@ -45,8 +47,8 @@ clearCode();
 
 addCodeInput("define variable n: konumx v: 40");
 addCodeInput("define variable n: konumy v: 40");
-addCodeInput("loop: 5");
-addCodeInput("loop: 5");
+addCodeInput("repeat: 5");
+addCodeInput("repeat: 5");
 addCodeInput("ellipse x: konumx y: konumy w: 30 h: 30");
 addCodeInput("increase value n: konumx v: 50");
 addCodeInput("end");
@@ -57,7 +59,7 @@ addCodeInput("end");
 runP5Code();
 
 // Conditionals
-addCodeInput("if: mouseX > 250");
+addCodeInput("if: touchX > 250");
 addCodeInput("fill r: 0 g: 0 b: 255");
 addCodeInput("else");
 addCodeInput("fill r: 255 g: 0 b: 0");
@@ -67,5 +69,5 @@ addCodeInput("ellipse x: 100 y: 100 w: 100 h: 100");
 runP5Code();
 
 // Moving Line
-addCodeInput("line sx: mouseX sy: 0 ex: mouseX ey: 100");
+addCodeInput("line sx: touchX sy: 0 ex: touchX ey: 100");
 runP5Code();
