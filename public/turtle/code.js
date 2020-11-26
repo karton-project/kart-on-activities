@@ -8,11 +8,11 @@ const codeList = [
         code: "setY({0});\n"
     },
     {
-        title: "geri",
-        code: "backward({0});\n"
+        title: "ileri",
+        code: "forward({0});\n"
     },
     {
-        title: "sağa",
+        title: "saga",
         code: "right({0});\n"
     },
     {
@@ -20,12 +20,44 @@ const codeList = [
         code: "left({0});\n"
     },
     {
+        title: "kalemi aç",
+        code: "pendown();\n"
+    },
+    {
+        title: "kalemi kapat",
+        code: "hideTurtle();\n"
+    },
+    {
+        title: "kalemi göster",
+        code: "showTurtle();\n"
+    },
+    {
+        title: "kalemi gizle",
+        code: "penup();\n"
+    },
+    {
+        title: "temizle",
+        code: "clear();\n"
+    },
+    {
         title: "tekrarla",
-        code: "loop({0});\n"
+        code: "for (var count = 1; count <= {0}; count++){\n"
     },
     {
         title: "bitir",
-        code: "endLoop();\n"
+        code: "}\n"
+    },
+    {
+        title: "renk",
+        code: "colour({0});\n"
+    },
+    {
+        title: "genişlik",
+        code: "width({0});\n"
+    },
+    {
+        title: "açı",
+        code: "angle({0});\n"
     },
     {
         title: "yay",
