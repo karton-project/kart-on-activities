@@ -24,7 +24,7 @@ function parse(code_text) {
     return resultCode;
 }
 
-function runTurtleCode() {
+function runP5Code() {
     eval(drawBlocks.join(" "));
 }
 

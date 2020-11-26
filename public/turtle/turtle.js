@@ -31,10 +31,9 @@ function initialise() {
         redraw: true, // does this belong here?
         wrap: true,
         colour: {
-            r: 0,
-            g: 0,
-            b: 0,
-            a: 1
+            h: 0,
+            s: 100,
+            l: 50
         },
     };
     imageContext.lineWidth = turtle.width;
@@ -276,12 +275,10 @@ function write(msg) {
 }
 
 // set the colour of the line using RGB values in the range 0 - 255.
-function colour(r, g, b, a) {
-    imageContext.strokeStyle = "rgba(" + r + "," + g + "," + b + "," + a + ")";
-    turtle.colour.r = r;
-    turtle.colour.g = g;
-    turtle.colour.b = b;
-    turtle.colour.a = a;
+function colour(h) {
+    if(h > 100) h = 100; else if (h <0) h = 0; else h = h*3.6;
+    imageContext.strokeStyle = "hsl(" + h + ", 100%, 50%)";
+    turtle.colour.h = h;
 }
 
 // Generate a random integer between low and hi
@@ -300,45 +297,6 @@ function animate(f, ms) {
 
 function setFont(font) {
     imageContext.font = font;
-}
-
-//////////////////
-// UI code below//
-//////////////////
-
-// Navigate command history
-var commandList = [];
-var currentCommand = 0;
-
-function prevCommand() {
-    currentCommand--;
-    if (currentCommand < 0) currentCommand = 0;
-    return commandList[currentCommand];
-}
-
-function prevCommand() {
-    currentCommand++;
-    if (currentCommand < 0) currentCommand = 0;
-    return commandList[currentCommand];
-}
-
-// Execute the program when the command box is changed
-// (when the user presses enter)
-function newCommand(commandText) {
-    commandList.push(commandText);
-    var definitionsText = $('#definitions').val();
-    try {
-        // execute any code in the definitions box
-        eval(definitionsText);
-        // execute the code in the command box
-        eval(commandText);
-    } catch (e) {
-        alert('Exception thrown:\n' + e);
-        throw e;
-    } finally {
-        // clear the command box
-        $(this).val('');
-    }
 }
 
 reset();

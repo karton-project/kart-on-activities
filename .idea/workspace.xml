@@ -20,18 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d864c7cd-bff8-4e8e-aaf8-75be132af7ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/turtle/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/turtle/turtle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/turtle/turtle.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/turtle/turtle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/turtle/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/turtle/code.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/turtle/codeP5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/turtle/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/turtle/interpreter.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/turtle/interpreter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/turtle/lib/p5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/turtle/lib/p5.play_patch119.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/turtle/p5.turtle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/turtle/turtle.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/turtle/turtle.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +133,7 @@
       <workItem from="1605812613413" duration="13760000" />
       <workItem from="1606212415985" duration="6042000" />
       <workItem from="1606328969953" duration="598000" />
-      <workItem from="1606391463617" duration="5201000" />
+      <workItem from="1606391463617" duration="6627000" />
     </task>
     <servers />
   </component>
