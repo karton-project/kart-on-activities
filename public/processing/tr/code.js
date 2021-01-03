@@ -1,72 +1,114 @@
 const codeList = [{
-        title: "doldur r:",
-        code: "fill({0});\n",
-        input: "color",
+        title: "doldur",
+        code: "fill({0}, 75, 50);\n",
+        input: "attr",
         code_type: 3,
-        no_in: 3
+        no_in: 1
     },
     {
-        title: "arkaplan r:",
-        code: "background({0});\n",
-        input: "color",
+        title: "arkaplan",
+        code: "background({0}, 75, 50);\n",
+        input: "attr",
         code_type: 3,
-        no_in: 3
+        no_in: 1
     },
     {
-        title: "kenar r:",
-        code: "stroke({0});\n",
-        input: "color",
+        title: "kenar",
+        code: "stroke({0}, 75, 50);\n",
+        input: "attr",
         code_type: 3,
-        no_in: 3
+        no_in: 1
     },
     {
-        title: "elips x:",
-        code: "ellipse({0});\n",
-        input: "shape",
-        code_type: 3,
-        no_in: 3
-    },
-    {
-        title: "dikdörtgen x:",
-        code: "rect({0});\n",
-        input: "shape",
-        code_type: 3,
-        no_in: 4
-    },
-    {
-        title: "dörtgen x:",
-        code: "rect({0});\n",
-        input: "shape",
-        code_type: 3,
-        no_in: 4
-    },
-    {
-        title: "üçgen x:",
-        code: "simpleTriangle({0});\n",
-        input: "shape",
-        code_type: 3,
-        no_in: 4
-    },
-    {
-        title: "çizgi sx:",
-        code: "line({0});\n",
-        input: "shape",
-        code_type: 3,
-        no_in: 4
-    },
-    {
-        title: "yazı:",
-        code: "textSize({0}); \n text('{1}', {2}, {3});\n",
-        input: "text",
-        code_type: 3,
-        no_in: 3
-    },
-    {
-        title: "hayalet animasyonu x:",
-        code: "animation(ghost, {0});\n",
-        input: "shape",
+        title: "boyutlar",
+        code: "size_w = {0}; size_h = {1};",
+        input: "attr",
         code_type: 3,
         no_in: 2
+    },
+    {
+        title: "konum",
+        code: "loc_x = {0}; loc_y = {1};",
+        input: "attr",
+        code_type: 3,
+        no_in: 2
+    },
+    {
+        title: "elips",
+        code: "ellipse(loc_x, loc_y, size_w, size_h);\n",
+        input: "shape",
+        code_type: 3,
+        no_in: 0
+    },
+    {
+        title: "şekle başla",
+        code: "beginShape();\n",
+        input: "shape",
+        code_type: 3,
+        no_in: 0
+    },
+    {
+        title: "şekli bitir",
+        code: "endShape(CLOSE);\n",
+        input: "shape",
+        code_type: 3,
+        no_in: 0
+    },
+    {
+        title: "nokta",
+        code: "vertex(loc_x, loc_y);\n",
+        input: "shape",
+        code_type: 3,
+        no_in: 0
+    },
+    {
+        title: "ötele",
+        code: "translate({0}, {1});\n",
+        input: "attr",
+        code_type: 3,
+        no_in: 2
+    },
+    {
+        title: "döndür:",
+        code: "rotate({0});\n",
+        input: "attr",
+        code_type: 3,
+        no_in: 1
+    },
+    {
+        title: "dikdörtgen",
+        code: "rect(loc_x, loc_y, size_w, size_h);\n",
+        input: "shape",
+        code_type: 3,
+        no_in: 0
+    },
+    {
+        title: "dörtgen",
+        code: "rect(loc_x, loc_y, size_w, size_h);\n",
+        input: "shape",
+        code_type: 3,
+        no_in: 0
+    },
+    {
+        title: "üçgen",
+        code: "simpleTriangle(loc_x, loc_y, size_w, size_h);\n",
+        input: "shape",
+        code_type: 3,
+        no_in: 0
+    },
+    {
+        title: "yazı",
+        code: "textSize(size_h); \n text('{0}', loc_x, loc_y);\n",
+        input: "shape",
+        code_type: 3,
+        no_in: 1
+    },
+    {
+        title: "kukla",
+        code: "animation(ghost, loc_x, loc_y);\n",
+        input: "shape",
+        code_type: 3,
+        no_in: 0
     },
     {
         title: "fonksiyon tanımla: ",
@@ -90,7 +132,7 @@ const codeList = [{
         no_in: 1
     },
     {
-        title: "değişken tanımla n:",
+        title: "değişken oluştur",
         code: "let {0} = {1};\n",
         input: "variable",
         code_type: 1,
@@ -104,7 +146,7 @@ const codeList = [{
         no_in: 2
     },
     {
-        title: "değerini düşür",
+        title: "değerini azalt",
         code: "{0} -= {1};\n",
         input: "variable",
         code_type: 3,
@@ -132,7 +174,7 @@ const codeList = [{
         no_in: 0
     },
     {
-        title: "tekrarla: ",
+        title: "tekrarla",
         code: "for(let i = 0; i < {0}; i++){\n",
         input: "cond",
         code_type: 3,
@@ -146,7 +188,7 @@ const codeList = [{
         no_in: 0
     },
     {
-        title: "rastgele sayı:",
+        title: "rastgele sayı",
         code: "let {0} = random({1});\n",
         input: "variable",
         code_type: 1,
@@ -160,21 +202,7 @@ const codeList = [{
         no_in: 0
     },
     {
-        title: "ötele x:",
-        code: "translate({0});\n",
-        input: "shape",
-        code_type: 3,
-        no_in: 1
-    },
-    {
-        title: "döndür:",
-        code: "rotate({0});\n",
-        input: "numeric",
-        code_type: 3,
-        no_in: 1
-    },
-    {
-        title: "bekle:",
+        title: "bekle",
         code: "await sleep({0});\n",
         input: "numeric",
         code_type: 3,

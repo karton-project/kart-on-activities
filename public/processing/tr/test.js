@@ -2,9 +2,11 @@
 clearCode();
 
 addCodeInput("fonksiyon tanımla: araba");
-addCodeInput("doldur r: 232 g: 103 b: 103");
-addCodeInput("kenar r: 165 g: 165 b: 165");
-addCodeInput("dörtgen x:100 y:50 w:150 h:100");
+addCodeInput("doldur \n 232");
+addCodeInput("kenar \n 165");
+addCodeInput("boyutlar \n 150 \n 100");
+addCodeInput("konum \n 100 \n 50");
+addCodeInput("dikdörtgen");
 addCodeInput("elips x:125 y:175 w:50 h:50");
 addCodeInput("elips x:225 y:175 w:50 h:50");
 addCodeInput("bitir");

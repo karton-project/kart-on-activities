@@ -25,7 +25,7 @@ const codeList = [
     },
     {
         title: "kalemi kapat",
-        code: "hideTurtle();\n"
+        code: "penup();\n"
     },
     {
         title: "kalemi göster",
@@ -33,7 +33,7 @@ const codeList = [
     },
     {
         title: "kalemi gizle",
-        code: "penup();\n"
+        code: "hideTurtle();\n"
     },
     {
         title: "temizle",
