@@ -56,10 +56,10 @@ const codeList = [{
     },
     {
         title: "nokta",
-        code: "vertex(loc_x, loc_y);\n",
-        input: "shape",
+        code: "vertex({0}, {1});\n",
+        input: "attr",
         code_type: 3,
-        no_in: 0
+        no_in: 2
     },
     {
         title: "ötele",
@@ -119,7 +119,7 @@ const codeList = [{
     },
     {
         title: "bitir",
-        code: "}\n",
+        code: "};\n",
         input: "end",
         code_type: 3,
         no_in: 0
@@ -160,7 +160,7 @@ const codeList = [{
         no_in: 2
     },
     {
-        title: "eğer : ",
+        title: "eğer",
         code: "if({0}){\n",
         input: "cond",
         code_type: 3,

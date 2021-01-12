@@ -1,76 +1,120 @@
 // Draw a Car with Function
 clearCode();
 
-addCodeInput("fonksiyon tanımla: araba");
-addCodeInput("doldur \n 232");
-addCodeInput("kenar \n 165");
-addCodeInput("boyutlar \n 150 \n 100");
-addCodeInput("konum \n 100 \n 50");
+addCodeInput("fonksiyon tanımla # araba");
+addCodeInput("doldur # 232");
+addCodeInput("kenar # 165");
+addCodeInput("boyutlar # 150 # 100");
+addCodeInput("konum # 100 # 50");
 addCodeInput("dikdörtgen");
-addCodeInput("elips x:125 y:175 w:50 h:50");
-addCodeInput("elips x:225 y:175 w:50 h:50");
+addCodeInput("boyutlar # 50 # 50");
+addCodeInput("konum # 125 # 175");
+addCodeInput("elips");
+addCodeInput("boyutlar # 50 # 50");
+addCodeInput("konum # 225 # 175");
+addCodeInput("elips");
 addCodeInput("bitir");
 
 // Call the Car Function with a Loop
-addCodeInput("tekrarla: 12");
-addCodeInput("çağır: araba");
-addCodeInput("ötele x: 50 y: 20");
+addCodeInput("tekrarla # 12");
+addCodeInput("çağır # araba");
+addCodeInput("ötele # 50 # 20");
 addCodeInput("bitir");
 
 runP5Code();
 
 // Draw a Cat
 clearCode();
-
-addCodeInput("dörtgen x: 100 y: 150 w: 100 h: 200");
-addCodeInput("doldur r: 200 g:100 b:100");
-addCodeInput("elips x: 100 y: 350 w:50 h:50");
-addCodeInput("elips x: 200 y: 350 w: 50 h: 50");
-addCodeInput("üçgen x: 60 y: 60 w: 50 h: 40");
-addCodeInput("üçgen x: 190 y: 60 w: 50 h: 40");
-addCodeInput("doldur r: 100 g: 90 b:120");
-addCodeInput("elips x: 150 y: 150 w: 200 h: 200");
-addCodeInput("doldur r: 255 g: 255 b: 255");
-addCodeInput("elips x: 120 y: 100 w: 50 h:50");
-addCodeInput("elips x: 180 y: 100 w: 50 h: 50");
-addCodeInput("doldur r: 0 g: 0 b: 0");
-addCodeInput("elips x: 120 y: 100 w: 20 h: 20");
-addCodeInput("elips x: 180 y: 100 w: 20 h: 20");
-addCodeInput("kenar r: 255 g: 255 b: 255");
-addCodeInput("çizgi sx: 150 sy: 170 ex: 120 ey: 180");
-addCodeInput("çizgi sx: 150 sy: 170 ex: 130 ey: 190");
-addCodeInput("çizgi sx: 150 sy: 170 ex: 180 ey: 180");
-addCodeInput("çizgi sx: 150 sy: 170 ex: 170 ey: 190");
+addCodeInput("konum # 100 # 150");
+addCodeInput("boyutlar # 100 # 200");
+addCodeInput("dikdörtgen");
+addCodeInput("doldur # 32");
+addCodeInput("konum # 100 # 350");
+addCodeInput("boyutlar # 50 # 50");
+addCodeInput("elips");
+addCodeInput("konum # 200 # 350");
+addCodeInput("boyutlar # 50 # 50");
+addCodeInput("elips");
+addCodeInput("konum # 60 # 60");
+addCodeInput("boyutlar # 50 # 40");
+addCodeInput("üçgen");
+addCodeInput("konum # 190 # 60");
+addCodeInput("boyutlar # 50 # 40");
+addCodeInput("üçgen");
+addCodeInput("doldur # 44");
+addCodeInput("konum # 150 # 150");
+addCodeInput("boyutlar # 200 # 200");
+addCodeInput("elips");
+addCodeInput("doldur # 192");
+addCodeInput("konum # 120 # 100");
+addCodeInput("boyutlar # 50 # 50");
+addCodeInput("elips");
+addCodeInput("konum # 180 # 100");
+addCodeInput("boyutlar # 50 # 50");
+addCodeInput("elips");
+addCodeInput("doldur # 200");
+addCodeInput("konum # 120 # 100");
+addCodeInput("boyutlar # 20 # 20");
+addCodeInput("elips");
+addCodeInput("konum # 180 # 100");
+addCodeInput("boyutlar # 20 # 20");
+addCodeInput("elips");
+addCodeInput("kenar 332");
+addCodeInput("şekle başla");
+addCodeInput("nokta # 150 # 170");
+addCodeInput("nokta # 120 # 180");
+addCodeInput("şekli bitir");
+addCodeInput("şekle başla");
+addCodeInput("nokta # 150 # 170");
+addCodeInput("nokta # 130 # 190");
+addCodeInput("şekli bitir");
+addCodeInput("şekle başla");
+addCodeInput("nokta # 150 # 170");
+addCodeInput("nokta # 180 # 180");
+addCodeInput("şekli bitir");
+addCodeInput("şekle başla");
+addCodeInput("nokta # 150 # 170");
+addCodeInput("nokta # 170 # 190");
+addCodeInput("şekli bitir");
 
 runP5Code();
 
 // Draw a Grid of Ellipses
 clearCode();
 
-addCodeInput("değişken tanımla n: konumx v: 40");
-addCodeInput("değişken tanımla n: konumy v: 40");
-addCodeInput("tekrarla: 5");
-addCodeInput("tekrarla: 5");
-addCodeInput("elips x: konumx y: konumy w: 30 h: 30");
-addCodeInput("değerini artır n: konumx v: 50");
+addCodeInput("değişken oluştur # x # 40");
+addCodeInput("değişken oluştur # y # 40");
+addCodeInput("tekrarla # 5");
+addCodeInput("tekrarla # 5");
+addCodeInput("konum # x # y");
+addCodeInput("boyutlar # 30 # 30");
+addCodeInput("elips");
+addCodeInput("değerini artır # x # 50");
 addCodeInput("bitir");
-addCodeInput("değer ata n: konumx v: 40");
-addCodeInput("değerini artır n: konumy v: 50");
+addCodeInput("değer ata # x # 40");
+addCodeInput("değerini artır # y # 50");
 addCodeInput("bitir");
 
 runP5Code();
 
 // Conditionals
-addCodeInput("eğer: dokunX > 250");
-addCodeInput("doldur r: 0 g: 0 b: 255");
+clearCode();
+
+addCodeInput("eğer # dokunx > 100");
+addCodeInput("doldur # 212");
 addCodeInput("değilse");
-addCodeInput("doldur r: 255 g: 0 b: 0");
+addCodeInput("doldur # 12");
 addCodeInput("bitir");
-addCodeInput("ellipse x: 100 y: 100 w: 100 h: 100");
+addCodeInput("konum # 100 # 100");
+addCodeInput("boyutlar # 100 # 100");
+addCodeInput("elips");
 
 runP5Code();
 
 // Moving Line
-addCodeInput("doldur r: 0 g: 0 b: 0");
-addCodeInput("çizgi sx: dokunX sy: 0 ex: dokunX ey: height");
+addCodeInput("doldur # 200");
+addCodeInput("şekle başla");
+addCodeInput("nokta # dokunx # 0");
+addCodeInput("nokta # dokunx # height");
+addCodeInput("şekli bitir");
 runP5Code();

@@ -7,11 +7,8 @@ class CodeP5 {
         try {
             let code = p5code.format(functionBlocks.join(' '), variableBlocks.join(' '), drawBlocks.join(' '), loopBlocks.join());
             let s = new Function("p", code);
-            if (debug) console.log(code);
+            console.log(code);
             this.p5_obj = new p5(s);
-            if (soundOn) {
-                playSong();
-            }
         } catch (e) {
             alert(e);
         }

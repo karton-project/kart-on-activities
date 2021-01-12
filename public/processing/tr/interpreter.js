@@ -1,8 +1,8 @@
 const p5code =
     "{0}\n" +
-    "let ghost, asterisk;\n" +
-    "let size_w = 100; size_h = 100;" +
-    "let loc_x = 100; loc_y = 100;" +
+    "var ghost, asterisk;\n" +
+    "var size_w = 100; size_h = 100;\n" +
+    "var loc_x = 100; loc_y = 100;\n" +
     "preload = function() {\n" +
     "  ghost = loadAnimation('assets/ghost_standing0001.png', 'assets/ghost_standing0007.png');\n" +
     "  asterisk = loadAnimation('assets/asterisk_circle0000.png', 'assets/asterisk_circle0002.png');\n" +
@@ -58,6 +58,13 @@ function initInterpreter() {
     fuse = new Fuse(codeList, fuseOptions);
 }
 
+function clearCode() {
+    variableBlocks = [];
+    functionBlocks = [];
+    drawBlocks = [];
+    loopBlocks = [];
+}
+
 function addCodeInput(codeInput, codeType) {
     let parsedText = parse(codeInput);
     ct = (typeof codeType !== 'undefined') ? codeType : parsedText[1];
@@ -89,8 +96,8 @@ function undo() {
 function parse(code_text) {
     let command = "";
     let params = [];
-    if (code_text.indexOf("\n") > 0) {
-        let code_parts = code_text.split(/\r?\n/);
+    if (code_text.indexOf("#") > 0) {
+        let code_parts = code_text.split('#');
         command = code_parts[0];
         params = code_parts.slice(1);
     } else {
