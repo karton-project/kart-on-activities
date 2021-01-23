@@ -1,4 +1,5 @@
 let drawBlocks = [];
+let commands = [];
 let debug = false;
 let fuse;
 
@@ -22,6 +23,24 @@ function parse(code_text) {
     let resultCode = result[0].item.code;
     if(code_sub.match(/\d+/g)) resultCode = resultCode.format(code_sub.match(/\d+/g).map(Number));
     return resultCode;
+}
+
+function getListOfElementIDs() {
+    var containerElements = document.getElementById("right-copy-1tomany").children;
+    var containerElementIDs = [];
+    for (var i = 0; i < containerElements.length; i++) {
+        containerElementIDs.push(containerElements[i].getElementsByTagName("label")[0].textContent + " " + containerElements[i].getElementsByTagName("input")[0].value);
+    }
+    return containerElementIDs;
+}
+
+function runCommandArray() {
+    drawBlocks = [];
+    commands = getListOfElementIDs();
+    for(var i = 0; i < commands.length; i++){
+        addCodeInput(commands[i]);
+    }
+    runP5Code();
 }
 
 function runP5Code() {
