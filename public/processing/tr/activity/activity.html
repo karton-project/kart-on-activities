@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kart-ON Kodlama</title>
+    <link href='./lib/dragula.css' rel='stylesheet' type='text/css'/>
+    <link href='style/activity.css' rel='stylesheet' type='text/css'/>
+    <script src="../../lib/fuse/fuse.js"></script>
+    <script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+    <script src="../p5.min.js"></script>
+    <script src="../../lib/p5.js/p5.play.js"></script>
+    <script src="../codeP5.js"></script>
+    <script src="../code.js"></script>
+    <script src="../interpreter.js"></script>
+</head>
+<body>
+<script>
+    if (!String.prototype.format) {
+        String.prototype.format = function () {
+            var args = arguments;
+            return this.replace(/{(\d+)}/g, function (match, number) {
+                return typeof args[number] !== 'undefined' ? args[number] : match;
+            });
+        };
+    }
+</script>
+<h2>Kart-ON Kodlama</h2>
+<div class='parent'>
+    <div class="title-container">
+        <div>Bloklar</div>
+        <div>Kod</div>
+        <div>Sonuç</div>
+    </div>
+    <div class="grid-container">
+        <div id='left-copy-1tomany' class='container container-left'>
+        </div>
+        <div id='right-copy-1tomany' class='container container-right'>
+        </div>
+        <div>
+            <button onclick="runCommandArray()">run code</button>
+            <div id="myContainer" width="320px" height="480px"></div>
+            <p id="console" style="cursor: pointer" onclick="copyElementText()"></p>
+        </div>
+    </div>
+</div>
+<script src='./lib/dragula.js'></script>
+<script src="./drag.js"></script>
+<script>
+    initInterpreter();
+    let codeP5 = new CodeP5();
+    codeP5.runCode();
+
+    function copyElementText() {
+        var text = document.getElementById("console").innerText;
+        var elem = document.createElement("textarea");
+        document.body.appendChild(elem);
+        elem.value = text;
+        elem.select();
+        document.execCommand("copy");
+        document.body.removeChild(elem);
+    }
+
+    for (var i = 0; i < codeList.length; i++) {
+        var inputArea = "";
+        if (codeList[i].no_in > 0)
+            for (var j = 0; j < codeList[i].no_in; j++)
+                inputArea += '<input type="text">\n';
+
+        document.getElementById("left-copy-1tomany").innerHTML +=
+            '<div class="card">\n' +
+            '<label>' + codeList[i].title + '</label>\n' +
+            inputArea +
+            '</div>';
+    }
+</script>
+</body>
+</html>

@@ -4,8 +4,8 @@ const p5code =
     "var size_w = 100; size_h = 100;\n" +
     "var loc_x = 100; loc_y = 100;\n" +
     "preload = function() {\n" +
-    "  ghost = loadAnimation('assets/ghost_standing0001.png', 'assets/ghost_standing0007.png');\n" +
-    "  asterisk = loadAnimation('assets/asterisk_circle0000.png', 'assets/asterisk_circle0002.png');\n" +
+    "  //ghost = loadAnimation('assets/ghost_standing0001.png', 'assets/ghost_standing0007.png');\n" +
+    "  //asterisk = loadAnimation('assets/asterisk_circle0000.png', 'assets/asterisk_circle0002.png');\n" +
     "};\n" +
     "simpleTriangle = function(x,y,w,h){\n" +
     "    triangle(x,y, x+w/2, y-h, x+w, y);\n" +
@@ -43,6 +43,7 @@ let variableBlocks = [];
 let functionBlocks = [];
 let drawBlocks = [];
 let loopBlocks = [];
+let commands = [];
 let condCodeType = 1;
 let debug = false;
 let ct = 3;
@@ -80,6 +81,28 @@ function addCodeInput(codeInput, codeType) {
     }
 
     if (debug) runP5Code();
+}
+
+function getListOfElementIDs() {
+    var containerElements = document.getElementById("right-copy-1tomany").children;
+    var containerElementIDs = [];
+    for (var i = 0; i < containerElements.length; i++) {
+        var inputTags = containerElements[i].getElementsByTagName("input");
+        containerElementIDs.push(containerElements[i].getElementsByTagName("label")[0].textContent +
+            ((inputTags !== undefined) ?
+                (inputTags.length > 0 ? " # " + inputTags[0].value : "") +
+                (inputTags.length > 1 ? " # " + inputTags[1].value : "") : ""));
+    }
+    return containerElementIDs;
+}
+
+function runCommandArray() {
+    drawBlocks = [];
+    commands = getListOfElementIDs();
+    for (var i = 0; i < commands.length; i++) {
+        addCodeInput(commands[i]);
+    }
+    runP5Code();
 }
 
 function undo() {

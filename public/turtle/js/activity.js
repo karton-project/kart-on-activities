@@ -272,7 +272,7 @@ function write(msg) {
 
 // set the colour of the line using RGB values in the range 0 - 255.
 function colour(h) {
-    if(h > 100) h = 100; else if (h <0) h = 0; else h = h*3.6;
+    if(h > 360) h = 360; else if (h <0) h = 0;
     imageContext.strokeStyle = "hsl(" + h + ", 100%, 50%)";
     turtle.colour.h = h;
 }
