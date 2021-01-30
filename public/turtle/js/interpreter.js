@@ -18,10 +18,18 @@ function addCodeInput(codeInput) {
 }
 
 function parse(code_text) {
-    let code_sub = code_text.toLowerCase().replace(/\s+/g, " ").trim();
-    let result = fuse.search(code_sub.replace(/\s+/g, " ").trim().substring(0, (code_sub.indexOf(':') > 0) ? code_sub.indexOf(':') : code_sub.length));
+    let command = "";
+    let params = [];
+    if (code_text.indexOf("#") > 0) {
+        let code_parts = code_text.split('#');
+        command = code_parts[0];
+        params = code_parts.slice(1);
+    } else {
+        command = code_text;
+    }
+    let result = fuse.search(command.toLowerCase().replace(/\s+/g, " ").trim());
     let resultCode = result[0].item.code;
-    if (code_sub.match(/\d+/g)) resultCode = resultCode.format(code_sub.match(/\d+/g).map(Number));
+    resultCode = resultCode.format(params[0]);
     return resultCode;
 }
 
@@ -29,7 +37,7 @@ function getListOfElementIDs() {
     var containerElements = document.getElementById("right-copy-1tomany").children;
     var containerElementIDs = [];
     for (var i = 0; i < containerElements.length; i++) {
-        containerElementIDs.push(containerElements[i].getElementsByTagName("label")[0].textContent + " " +
+        containerElementIDs.push(containerElements[i].getElementsByTagName("label")[0].textContent + "#" +
             (containerElements[i].getElementsByTagName("input").length > 0 ? containerElements[i].getElementsByTagName("input")[0].value : ""));
     }
     return containerElementIDs;

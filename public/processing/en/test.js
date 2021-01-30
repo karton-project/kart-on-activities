@@ -1,73 +1,120 @@
 // Draw a Car with Function
 clearCode();
 
-addCodeInput("define function: car");
-addCodeInput("fill r: 232 g: 103 b: 103");
-addCodeInput("stroke r: 165 g: 165 b: 165");
-addCodeInput("rect x:100 y:50 w:150 h:100");
-addCodeInput("ellipse x:125 y:175 w:50 h:50");
-addCodeInput("ellipse x:225 y:175 w:50 h:50");
+addCodeInput("define function # araba");
+addCodeInput("fill # 232");
+addCodeInput("stroke # 165");
+addCodeInput("dimension # 150 # 100");
+addCodeInput("location # 100 # 50");
+addCodeInput("rectangle");
+addCodeInput("dimension # 50 # 50");
+addCodeInput("location # 125 # 175");
+addCodeInput("ellipse");
+addCodeInput("dimension # 50 # 50");
+addCodeInput("location # 225 # 175");
+addCodeInput("ellipse");
 addCodeInput("end");
 
-// Call the Car Function with a repeat
-addCodeInput("repeat: 12");
-addCodeInput("call: car");
-addCodeInput("move x: 50 y: 20");
+// Call the Car Function with a Loop
+addCodeInput("repeat # 12");
+addCodeInput("call # araba");
+addCodeInput("translate # 50 # 20");
 addCodeInput("end");
 
 runP5Code();
 
 // Draw a Cat
 clearCode();
-
-addCodeInput("rect x: 100 y: 150 w: 100 h: 200");
-addCodeInput("fill r: 200 g:100 b:100");
-addCodeInput("ellipse x: 100 y: 350 w:50 h:50");
-addCodeInput("ellipse x: 200 y: 350 w: 50 h: 50");
-addCodeInput("triangle x: 60 y: 60 w: 50 h: 40");
-addCodeInput("triangle x: 190 y: 60 w: 50 h: 40");
-addCodeInput("fill r: 100 g: 90 b:120");
-addCodeInput("ellipse x: 150 y: 150 w: 200 h: 200");
-addCodeInput("fill r: 255 g: 255 b: 255");
-addCodeInput("ellipse x: 120 y: 100 w: 50 h:50");
-addCodeInput("ellipse x: 180 y: 100 w: 50 h: 50");
-addCodeInput("fill r: 0 g: 0 b: 0");
-addCodeInput("ellipse x: 120 y: 100 w: 20 h: 20");
-addCodeInput("ellipse x: 180 y: 100 w: 20 h: 20");
-addCodeInput("stroke r: 255 g: 255 b: 255");
-addCodeInput("line sx: 150 sy: 170 ex: 120 ey: 180");
-addCodeInput("line sx: 150 sy: 170 ex: 130 ey: 190");
-addCodeInput("line sx: 150 sy: 170 ex: 180 ey: 180");
-addCodeInput("line sx: 150 sy: 170 ex: 170 ey: 190");
+addCodeInput("location # 100 # 150");
+addCodeInput("dimension # 100 # 200");
+addCodeInput("rectangle");
+addCodeInput("fill # 32");
+addCodeInput("location # 100 # 350");
+addCodeInput("dimension # 50 # 50");
+addCodeInput("ellipse");
+addCodeInput("location # 200 # 350");
+addCodeInput("dimension # 50 # 50");
+addCodeInput("ellipse");
+addCodeInput("location # 60 # 60");
+addCodeInput("dimension # 50 # 40");
+addCodeInput("triangle");
+addCodeInput("location # 190 # 60");
+addCodeInput("dimension # 50 # 40");
+addCodeInput("triangle");
+addCodeInput("fill # 44");
+addCodeInput("location # 150 # 150");
+addCodeInput("dimension # 200 # 200");
+addCodeInput("ellipse");
+addCodeInput("fill # 192");
+addCodeInput("location # 120 # 100");
+addCodeInput("dimension # 50 # 50");
+addCodeInput("ellipse");
+addCodeInput("location # 180 # 100");
+addCodeInput("dimension # 50 # 50");
+addCodeInput("ellipse");
+addCodeInput("fill # 200");
+addCodeInput("location # 120 # 100");
+addCodeInput("dimension # 20 # 20");
+addCodeInput("ellipse");
+addCodeInput("location # 180 # 100");
+addCodeInput("dimension # 20 # 20");
+addCodeInput("ellipse");
+addCodeInput("stroke 332");
+addCodeInput("begin shape");
+addCodeInput("vertex # 150 # 170");
+addCodeInput("vertex # 120 # 180");
+addCodeInput("end shape");
+addCodeInput("begin shape");
+addCodeInput("vertex # 150 # 170");
+addCodeInput("vertex # 130 # 190");
+addCodeInput("end shape");
+addCodeInput("begin shape");
+addCodeInput("vertex # 150 # 170");
+addCodeInput("vertex # 180 # 180");
+addCodeInput("end shape");
+addCodeInput("begin shape");
+addCodeInput("vertex # 150 # 170");
+addCodeInput("vertex # 170 # 190");
+addCodeInput("end shape");
 
 runP5Code();
 
 // Draw a Grid of Ellipses
 clearCode();
 
-addCodeInput("define variable n: konumx v: 40");
-addCodeInput("define variable n: konumy v: 40");
-addCodeInput("repeat: 5");
-addCodeInput("repeat: 5");
-addCodeInput("ellipse x: konumx y: konumy w: 30 h: 30");
-addCodeInput("increase value n: konumx v: 50");
+addCodeInput("new variable # x # 40");
+addCodeInput("new variable # y # 40");
+addCodeInput("repeat # 5");
+addCodeInput("repeat # 5");
+addCodeInput("location # x # y");
+addCodeInput("dimension # 30 # 30");
+addCodeInput("ellipse");
+addCodeInput("increase value # x # 50");
 addCodeInput("end");
-addCodeInput("change value n: konumx v: 40");
-addCodeInput("increase value n: konumy v: 50");
+addCodeInput("set value # x # 40");
+addCodeInput("increase value # y # 50");
 addCodeInput("end");
 
 runP5Code();
 
 // Conditionals
-addCodeInput("if: touchX > 250");
-addCodeInput("fill r: 0 g: 0 b: 255");
+clearCode();
+
+addCodeInput("if # touchx > 100");
+addCodeInput("fill # 212");
 addCodeInput("else");
-addCodeInput("fill r: 255 g: 0 b: 0");
+addCodeInput("fill # 12");
 addCodeInput("end");
-addCodeInput("ellipse x: 100 y: 100 w: 100 h: 100");
+addCodeInput("location # 100 # 100");
+addCodeInput("dimension # 100 # 100");
+addCodeInput("ellipse");
 
 runP5Code();
 
 // Moving Line
-addCodeInput("line sx: touchX sy: 0 ex: touchX ey: 100");
+addCodeInput("fill # 200");
+addCodeInput("begin shape");
+addCodeInput("vertex # touchx # 0");
+addCodeInput("vertex # touchx # height");
+addCodeInput("end shape");
 runP5Code();

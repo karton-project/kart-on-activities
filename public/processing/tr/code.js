@@ -69,7 +69,7 @@ const codeList = [{
         no_in: 2
     },
     {
-        title: "döndür:",
+        title: "döndür",
         code: "rotate({0});\n",
         input: "attr",
         code_type: 3,
@@ -125,7 +125,7 @@ const codeList = [{
         no_in: 0
     },
     {
-        title: "çağır:",
+        title: "çağır",
         code: "{0}();\n",
         input: "call",
         code_type: 3,
