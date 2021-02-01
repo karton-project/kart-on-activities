@@ -23,8 +23,8 @@ html, body {
     box-sizing: inherit;
 }
 
-body, input, button {
-    font-size: 17px;
+body, input{
+    font-size: 16px;
     color: #ecf0f1;
 }
 
@@ -42,8 +42,8 @@ ul {
 
 .parent {
     background-color: rgba(255, 255, 255, 0.2);
-    margin: 50px 0;
-    padding: 20px;
+    margin: 10px 0;
+    padding: 10px;
 }
 
 input {
@@ -60,7 +60,7 @@ button {
     background-color: #ecf0f1;
     color: #942A57;
     border: 0;
-    padding: 18px 12px;
+    padding: 8px 8px;
     margin-left: 6px;
     cursor: pointer;
     outline: none;
@@ -92,7 +92,13 @@ button:hover {
 .title-container {
     display: grid;
     grid-template-columns: 40% 20% 40%;
-    height: 30px;
+    height: 4vh;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    height: 6vh;
 }
 
 .grid-container {
