@@ -94,6 +94,11 @@ button:hover {
     display: table;
 }
 
+.container {
+    height: 80vh;
+    overflow-y: scroll;
+}
+
 .title-container {
     display: grid;
     grid-template-columns: 40% 20% 40%;

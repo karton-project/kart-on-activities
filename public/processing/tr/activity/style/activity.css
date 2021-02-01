@@ -34,15 +34,6 @@ label {
     margin-bottom: 15px;
 }
 
-#superSecret {
-    opacity: 0.01;
-    background-color: rgb(0,0,0,0.3);
-    height: 60px;
-    width: 100%;
-    transition: 0.2s;
-    object-fit: cover;
-}
-
 ul {
     margin: 0;
     padding: 0;
@@ -56,12 +47,10 @@ ul {
 }
 
 input {
-    border: none;
-    outline: none;
+    border: black solid 2px;
     background-color: #ecf0f1;
     padding: 10px;
     color: #942A57;
-    border: 0;
     margin: 5px 0;
     display: block;
     width: 100%;
@@ -84,6 +73,7 @@ button:hover {
 
 .card {
     background: var(--card-bg);
+    color: black;
     border-radius: 8px;
     padding: 10px;
 }
@@ -92,6 +82,11 @@ button:hover {
 /* dragula-specific example page styles */
 .wrapper {
     display: table;
+}
+
+.container {
+    height: 80vh;
+    overflow-y: scroll;
 }
 
 .title-container {

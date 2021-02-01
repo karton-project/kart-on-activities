@@ -37,7 +37,8 @@
         <div id='right-copy-1tomany' class='container container-right'>
         </div>
         <div>
-            <button onclick="runCommandArray()">run code</button>
+            <button onclick="runCommandArray()">çalıştır</button>
+            <button onclick="clearCode()">temizle</button>
             <div id="myContainer" width="320px" height="480px"></div>
             <p id="console" style="cursor: pointer" onclick="copyElementText()"></p>
         </div>
@@ -48,7 +49,19 @@
 <script>
     initInterpreter();
     let codeP5 = new CodeP5();
-    codeP5.runCode();
+    codeP5.runActivity();
+
+    const colorCodes = {
+        color: "#EEF6E8",
+        attr: "#FFFCEB",
+        shape: "#EEFAFF", 
+        variable: "#F4E9F4", 
+        control: "#F2E9E9",
+        call: "#F2E9E9",
+        cond: "#F2E9E9",
+        loop: "#F2E9E9",
+        end: "#F2E9E9"
+    }
 
     function copyElementText() {
         var text = document.getElementById("console").innerText;
@@ -67,7 +80,7 @@
                 inputArea += '<input type="text">\n';
 
         document.getElementById("left-copy-1tomany").innerHTML +=
-            '<div class="card">\n' +
+            '<div class="card" style="background: '+ colorCodes[codeList[i].input] +'">\n' +
             '<label>' + codeList[i].title + '</label>\n' +
             inputArea +
             '</div>';

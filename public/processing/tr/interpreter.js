@@ -1,42 +1,3 @@
-const p5code =
-    "{0}\n" +
-    "var ghost, asterisk;\n" +
-    "var size_w = 100; size_h = 100;\n" +
-    "var loc_x = 100; loc_y = 100;\n" +
-    "preload = function() {\n" +
-    "  //ghost = loadAnimation('assets/ghost_standing0001.png', 'assets/ghost_standing0007.png');\n" +
-    "  //asterisk = loadAnimation('assets/asterisk_circle0000.png', 'assets/asterisk_circle0002.png');\n" +
-    "};\n" +
-    "simpleTriangle = function(x,y,w,h){\n" +
-    "    triangle(x,y, x+w/2, y-h, x+w, y);\n" +
-    "};\n" +
-    "gridLines = function(){\n" +
-    "  fill(0,0,66);\n" +
-    "  stroke(0,0,77);\n" +
-    "  for (var i = 0; i < width; i += 50) {\n" +
-    "    line(i, 0, i, height);\n" +
-    "    text(i, i + 1, 10);\n" +
-    "  }\n" +
-    "  for (var i = 0; i < height; i += 50) {\n" +
-    "    line(0, i, width, i);\n" +
-    "    text(i, 0, i - 1);\n" +
-    "  }\n" +
-    "};\n" +
-    "setup = function() {\n" +
-    " colorMode(HSL, 360, 100, 100);" +
-    " var myCanvas = createCanvas(windowWidth,windowHeight);\n" +
-    " myCanvas.parent('myContainer');\n" +
-    " gridLines();\n" +
-    "};\n" +
-    "drawThings = function(){\n" +
-    " {1}\n" +
-    " {2}\n" +
-    "};\n" +
-    "draw = function() {\n" +
-    " drawThings();\n" +
-    " {3}\n" +
-    "};";
-
 let condOnProgress = false;
 let variableNames = [];
 let variableBlocks = [];
@@ -64,6 +25,8 @@ function clearCode() {
     functionBlocks = [];
     drawBlocks = [];
     loopBlocks = [];
+    variableNames = [];
+    runP5Code();
 }
 
 function addCodeInput(codeInput, codeType) {
@@ -96,15 +59,6 @@ function getListOfElementIDs() {
     return containerElementIDs;
 }
 
-function runCommandArray() {
-    drawBlocks = [];
-    commands = getListOfElementIDs();
-    for (var i = 0; i < commands.length; i++) {
-        addCodeInput(commands[i]);
-    }
-    runP5Code();
-}
-
 function undo() {
     if (ct === 1)
         variableBlocks.pop();
@@ -132,14 +86,14 @@ function parse(code_text) {
         return ["", undefined];
     }
     let codeType = condOnProgress ? condCodeType : result[0].item.code_type;
-    if (result[0].item.input === "attr") {
-        if (result[0].item.no_in === 1) {
+    if (result[0].item.input === "attr" || result[0].item.input === "shape" || result[0].item.input === "color") {
+        if (result[0].item.no_in === 0) {
+            resultCode = result[0].item.code;
+        } else if (result[0].item.no_in === 1) {
             resultCode = resultCode.format(params[0]);
         } else if (result[0].item.no_in === 2) {
             resultCode = resultCode.format(params[0], params[1]);
         }
-    } else if (result[0].item.input === "shape") {
-        resultCode = result[0].item.code;
     } else if (result[0].item.input === "call") {
         resultCode = resultCode.format(params[0].trim().replace(/\s/g, '_'));
     } else if (result[0].item.input === "cond") {
@@ -170,5 +124,24 @@ function runP5Code() {
     let codeP5 = new CodeP5();
     if (!condOnProgress) {
         codeP5.runCode();
+    }
+}
+
+// For the activity
+
+function runCommandArray() {
+    drawBlocks = [];
+    commands = getListOfElementIDs();
+    for (var i = 0; i < commands.length; i++) {
+        addCodeInput(commands[i]);
+    }
+    runP5Activity();
+}
+
+
+function runP5Activity() {
+    let codeP5 = new CodeP5();
+    if (!condOnProgress) {
+        codeP5.runActivity();
     }
 }
