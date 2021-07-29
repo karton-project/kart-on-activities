@@ -89,10 +89,10 @@ addCodeInput("tekrarla # 5");
 addCodeInput("konum # x # y");
 addCodeInput("boyutlar # 30 # 30");
 addCodeInput("elips");
-addCodeInput("değerini artır # x # 50");
+addCodeInput("değer artır # x # 50");
 addCodeInput("bitir");
 addCodeInput("değer ata # x # 40");
-addCodeInput("değerini artır # y # 50");
+addCodeInput("değer artır # y # 50");
 addCodeInput("bitir");
 
 runP5Code();

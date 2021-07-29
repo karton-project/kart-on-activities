@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kart-ON Coding</title>
+    <link href='lib/dragula.css' rel='stylesheet' type='text/css' />
+    <link href='style/activity.css' rel='stylesheet' type='text/css' />
+    <script src="../lib/fuse/fuse.js"></script>
+    <script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+    <script src="../en/p5.min.js"></script>
+    <script src="../lib/p5.js/p5.play.js"></script>
+    <script src="../en/codeP5.js"></script>
+    <script src="../en/code.js"></script>
+    <script src="../en/interpreter.js"></script>
+</head>
+
+<body>
+    <script>
+        if (!String.prototype.format) {
+            String.prototype.format = function() {
+                var args = arguments;
+                return this.replace(/{(\d+)}/g, function(match, number) {
+                    return typeof args[number] !== 'undefined' ? args[number] : match;
+                });
+            };
+        }
+    </script>
+    <h2>Kart-ON Coding</h2>
+    <div class='parent'>
+        <div class="title-container">
+            <div>Blocks</div>
+            <div>Code</div>
+            <div>Output</div>
+        </div>
+        <div class="button-container">
+            <div></div>
+            <div><button onclick="clearArea()">clear</button></div>
+            <div><button onclick="runCommandArray()">run</button></div>
+        </div>
+        <div class="grid-container">
+            <div id='left-copy-1tomany' class='container container-left'>
+            </div>
+            <div id='right-copy-1tomany' class='container container-right'>
+            </div>
+            <div>
+                <div id="myContainer" width="320px" height="480px"></div>
+                <p id="console" style="cursor: pointer" onclick="copyElementText()"></p>
+            </div>
+        </div>
+    </div>
+    <script src='lib/dragula.js'></script>
+    <script src="drag.js"></script>
+    <script>
+        initInterpreter();
+        let codeP5 = new CodeP5();
+        codeP5.runActivity();
+
+        const colorCodes = {
+            color: "#EEF6E8",
+            attr: "#FFFCEB",
+            shape: "#EEFAFF",
+            variable: "#F4E9F4",
+            control: "#F2E9E9",
+            call: "#F2E9E9",
+            cond: "#F2E9E9",
+            loop: "#F2E9E9",
+            end: "#F2E9E9"
+        }
+
+        function copyElementText() {
+            var text = document.getElementById("console").innerText;
+            var elem = document.createElement("textarea");
+            document.body.appendChild(elem);
+            elem.value = text;
+            elem.select();
+            document.execCommand("copy");
+            document.body.removeChild(elem);
+        }
+
+        for (var i = 0; i < codeList.length; i++) {
+            var inputArea = "";
+            if (codeList[i].no_in > 0)
+                for (var j = 0; j < codeList[i].no_in; j++)
+                    inputArea += '<input type="text">\n';
+
+            document.getElementById("left-copy-1tomany").innerHTML +=
+                '<div class="card" style="background: ' + colorCodes[codeList[i].input] + '">\n' +
+                '<label>' + codeList[i].title + '</label>\n' +
+                inputArea +
+                '</div>';
+        }
+
+
+        function clearArea() {
+            document.getElementById("right-copy-1tomany").innerHTML = "";
+        }
+    </script>
+</body>
+
+</html>

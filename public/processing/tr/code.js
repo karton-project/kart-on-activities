@@ -154,14 +154,14 @@ const codeList = [{
         no_in: 2
     },
     {
-        title: "değerini artır",
+        title: "değer artır",
         code: "{0} += {1};\n",
         input: "variable",
         code_type: 3,
         no_in: 2
     },
     {
-        title: "değerini azalt",
+        title: "değer azalt",
         code: "{0} -= {1};\n",
         input: "variable",
         code_type: 3,
