@@ -27,10 +27,21 @@ function parse(code_text) {
     } else {
         command = code_text;
     }
+    params = correctParams(params);
     let result = fuse.search(command.toLowerCase().replace(/\s+/g, " ").trim());
     let resultCode = result[0].item.code;
     resultCode = resultCode.format(params[0]);
     return resultCode;
+}
+
+function correctParams(params) {
+    params[0] = params[0].toLowerCase().replace(/\s+/g, " ").trim();
+    params[0] = params[0].replace("o", "0");
+    params[0] = params[0].replace("s", "5");
+    params[0] = params[0].replace("g", "9");
+    params[0] = params[0].replace("b", "6");
+    params[0] = params[0].replace("i", "1");
+    return params;
 }
 
 function getListOfElementIDs() {

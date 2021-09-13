@@ -85,6 +85,7 @@ function parse(code_text) {
     if (result[0].score > 0.35) { // 0 is complete match, 1 is complete mismatch
         return ["", undefined];
     }
+    params = correctParams(params);
     let codeType = condOnProgress ? condCodeType : result[0].item.code_type;
     if (result[0].item.input === "attr" || result[0].item.input === "shape" || result[0].item.input === "color") {
         if (result[0].item.no_in === 0) {
@@ -118,6 +119,18 @@ function parse(code_text) {
         }
     }
     return [resultCode, codeType];
+}
+
+function correctParams(params) {
+    for (var i = 0; i < params.length; i++) {
+        params[i] = params[i].toLowerCase().replace(/\s+/g, " ").trim();
+        params[i] = params[i].replace("o", "0");
+        params[i] = params[i].replace("s", "5");
+        params[i] = params[i].replace("g", "9");
+        params[i] = params[i].replace("b", "6");
+        params[i] = params[i].replace("i", "1");
+    }
+    return params;
 }
 
 function runP5Code() {
