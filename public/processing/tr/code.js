@@ -91,6 +91,13 @@ const codeList = [{
         no_in: 2
     },
     {
+        title: "çizgi",
+        code: "line(loc_x, loc_y, {0}, {1});\n",
+        input: "attr",
+        code_type: 3,
+        no_in: 2
+    },
+    {
         title: "ötele",
         code: "translate({0}, {1});\n",
         input: "attr",
@@ -175,7 +182,7 @@ const codeList = [{
         no_in: 2
     },
     {
-        title: "rastgele sayı",
+        title: "rastgele",
         code: "let {0} = random({1});\n",
         input: "variable",
         code_type: 1,
