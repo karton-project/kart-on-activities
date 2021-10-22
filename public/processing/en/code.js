@@ -20,7 +20,7 @@ const codeList = [{
         no_in: 1
     },
     {
-        title: "dimension",
+        title: "size",
         code: "size_w = {0}; size_h = {1};",
         input: "attr",
         code_type: 3,
