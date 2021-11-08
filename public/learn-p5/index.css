@@ -110,12 +110,3 @@ a:hover:after {
 .card a:hover:after {
   width: 100%;
 }
-
-.image {
-    width: auto !important; /*override the width below*/
-    width: 100%;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    clear: both;
-}
