@@ -6,6 +6,17 @@ function componentToHex(c) {
     return hex.length == 1 ? "0" + hex : hex;
 }
 
+function hslToHex(h, s, l) {
+    l /= 100;
+    const a = s * Math.min(l, 1 - l) / 100;
+    const f = n => {
+        const k = (n + h / 30) % 12;
+        const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+        return Math.round(255 * color).toString(16).padStart(2, '0');   // convert to Hex and prefix "0" if needed
+    };
+    return `#${f(0)}${f(8)}${f(4)}`;
+}
+
 function rgbToHex(r, g, b) {
     return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
@@ -40,9 +51,7 @@ $(document).ready(function () {
         $("#input-container").html(codeList.find(o => o.title === $(this).parent().find("select").val()).input);
         tangle = new Tangle(document, {
             initialize: function () {
-                this.r = 255;
-                this.g = 100;
-                this.b = 0;
+                this.h = 255;
                 this.x = 50;
                 this.y = 50;
                 this.w = 100;
@@ -55,7 +64,7 @@ $(document).ready(function () {
                 this.v2 = 35;
             },
             update: function () {
-                let colorCode = rgbToHex(this.r, this.g, this.b);
+                let colorCode = hslToHex(this.h, 100, 50);
                 if (document.getElementById("color") !== null){
                     document.getElementById("color").style.background = colorCode;
                     document.getElementById("color").addEventListener("click", function() {

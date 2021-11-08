@@ -1,24 +1,30 @@
-const colorHTML = "r: <span data-var='r' class='TKAdjustableNumber' data-min='0' data-max='255'></span> " +
-    "g: <span data-var='g' class='TKAdjustableNumber' data-min='0' data-max='255'></span> " +
-    "b: <span data-var='b' class='TKAdjustableNumber' data-min='0' data-max='255'></span> " +
+const colorHTML = "# <span data-var='h' class='TKAdjustableNumber' data-min='0' data-max='360'></span> " +
     "<input type='color' id='c' hidden>" +
     "<div id='color'></div>"
 
+const locHTML = "# <span data-var='x' class='TKAdjustableNumber' data-min='0' data-max='500'></span> " +
+    "# <span data-var='y' class='TKAdjustableNumber' data-min='0' data-max='500'></span> " +
+    "<span id='shape'></span>"
+
+const sizeHTML = "# <span data-var='w' class='TKAdjustableNumber' data-min='0' data-max='500'></span> " +
+    "# <span data-var='h' class='TKAdjustableNumber' data-min='0' data-max='500'></span> " +
+    "<span id='shape'></span>"
+
 const codeList = [{
-        title: "doldur",
-        input: colorHTML,
-        code: "fill({0});\n",
-        input_type: "color",
-        code_type: 3,
-        no_in: 3
-    },
+    title: "doldur",
+    input: colorHTML,
+    code: "fill({0});\n",
+    input_type: "color",
+    code_type: 3,
+    no_in: 1
+},
     {
         title: "arkaplan",
         input: colorHTML,
         code: "background({0});\n",
         input_type: "color",
         code_type: 3,
-        no_in: 3
+        no_in: 1
     },
     {
         title: "kenar",
@@ -26,11 +32,27 @@ const codeList = [{
         code: "stroke({0});\n",
         input_type: "color",
         code_type: 3,
+        no_in: 1
+    },
+    {
+        title: "boyut",
+        input: sizeHTML,
+        code: "ellipse({0});\n",
+        input_type: "shape",
+        code_type: 3,
+        no_in: 3
+    },
+    {
+        title: "konum",
+        input: locHTML,
+        code: "ellipse({0});\n",
+        input_type: "shape",
+        code_type: 3,
         no_in: 3
     },
     {
         title: "elips",
-        input: "x: <span data-var='x' class='TKAdjustableNumber' data-min='0' data-max='500'></span> y: <span data-var='y' class='TKAdjustableNumber' data-min='0' data-max='500'></span> w: <span data-var='w' class='TKAdjustableNumber' data-min='0' data-max='500'></span> h: <span data-var='h' class='TKAdjustableNumber' data-min='0' data-max='500'></span> <span id='shape'></span>",
+        input: "",
         code: "ellipse({0});\n",
         input_type: "shape",
         code_type: 3,
@@ -38,7 +60,7 @@ const codeList = [{
     },
     {
         title: "dikdörtgen",
-        input: "x: <span data-var='x' class='TKAdjustableNumber' data-min='0' data-max='500'></span> y: <span data-var='y' class='TKAdjustableNumber' data-min='0' data-max='500'></span> w: <span data-var='w' class='TKAdjustableNumber' data-min='0' data-max='500'></span> h: <span data-var='h' class='TKAdjustableNumber' data-min='0' data-max='500'></span> <span id='shape'></span>",
+        input: "",
         code: "rect({0});\n",
         input_type: "shape",
         code_type: 3,
@@ -46,7 +68,7 @@ const codeList = [{
     },
     {
         title: "üçgen",
-        input: "x: <span data-var='x' class='TKAdjustableNumber' data-min='0' data-max='500'></span> y: <span data-var='y' class='TKAdjustableNumber' data-min='0' data-max='500'></span> w: <span data-var='w' class='TKAdjustableNumber' data-min='0' data-max='500'></span> h: <span data-var='h' class='TKAdjustableNumber' data-min='0' data-max='500'></span> <span id='shape'></span>",
+        input: "",
         code: "simpleTriangle({0});\n",
         input_type: "shape",
         code_type: 3,

@@ -23,8 +23,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d864c7cd-bff8-4e8e-aaf8-75be132af7ba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/learn-p5/activity/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/learn-p5/activity/activity.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/learn-p5/activity/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/learn-p5/activity/drag.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/learn-p5/activity/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/learn-p5/media/dikdortgen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/learn-p5/media/doldur240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/learn-p5/media/doldur50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/learn-p5/media/elips.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/learn-p5/tuts/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/learn-p5/tuts/excali/1.excalidraw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/learn-p5/tuts/excali/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/learn-p5/tuts/excali/1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/learn-p5/tuts/excali/1_trs.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libraries/dragula/dragula.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libraries/dragula/dragula.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/processing/en/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/processing/en/code.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/generator/js/TangleTemplate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/generator/js/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/generator/js/code.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/generator/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/generator/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/learn-p5/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +74,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../deep-sketch/sketch-embeddings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/libraries/dragula" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -68,18 +87,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/libraries/dragula" />
+      <recent name="$PROJECT_DIR$/public/learn-p5" />
+      <recent name="$PROJECT_DIR$/public/learn-p5/tuts" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\kart-on-activities\public\processing\tr\activity" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\kart-on-activities\public\turtle\js" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\kart-on-activities\public\turtle\lib" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\kart-on-activities\public\turtle" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\kart-on-activities\public\processing" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/learn-p5/tuts/excali" />
       <recent name="$PROJECT_DIR$/public/processing" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\kart-on-activities\public\turtle\style" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\kart-on-activities\public\turtle\img" />
       <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\kart-on-activities\public\turtle\js" />
-      <recent name="C:\Users\asabuncuoglu13\Desktop\education-repo\kart-on-activities\public\turtle\lib" />
     </key>
   </component>
   <component name="RunManager">
@@ -167,7 +186,9 @@
       <workItem from="1613231400320" duration="10000" />
       <workItem from="1613472716249" duration="743000" />
       <workItem from="1615463797901" duration="14000" />
-      <workItem from="1634888528463" duration="761000" />
+      <workItem from="1634888528463" duration="1460000" />
+      <workItem from="1634997169144" duration="12000" />
+      <workItem from="1636358834738" duration="13355000" />
     </task>
     <servers />
   </component>
