@@ -26,6 +26,30 @@ body {
     margin: 0 auto;
 }
 
+button {
+    color: #fff;
+    width: 50%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-rendering: optimizelegibility;
+    text-align: center;
+    border: none;
+    border-bottom: 10px solid;
+    border-color: #4f1e58;
+    padding: 24px 20px 20px;
+    margin-top: 14px;
+    background-color: #802b83;
+    transition: margin-top 0.05s, margin-bottom 0.05s, border 0.05s, padding 0.05s, top 0.05s, bottom 0.05s, width 0.05s, height 0.05s;
+}
+
+button:active {
+    border-bottom-width: 0px;
+    margin-top: 24px;
+}
+
+button:hover {
+}
+
 .google-slides-container {
     position: relative;
     width: 100%;
@@ -109,4 +133,37 @@ a:hover:after {
 
 .card a:hover:after {
   width: 100%;
+}
+
+.wrap {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.wrap .half {
+    width: 50%;
+    padding: 14px;
+}
+
+.readout {
+    margin-top: 32px;
+    line-height: 180%;
+}
+
+.picker {
+    border: solid 5px white;
+}
+
+#values {
+    font-family: monospace;
+    line-height: 150%;
+}
+
+.link {
+    margin-top: 16px;
+}
+
+.link a {
+    color: MediumSlateBlue;
 }

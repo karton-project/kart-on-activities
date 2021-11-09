@@ -22,30 +22,6 @@ img {
     padding: 20px;
 }
 
-button {
-    color: #fff;
-    width: 50%;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-rendering: optimizelegibility;
-    text-align: center;
-    border: none;
-    border-bottom: 10px solid;
-    border-color: #4f1e58;
-    padding: 24px 20px 20px;
-    margin-top: 14px;
-    background-color: #802b83;
-    transition: margin-top 0.05s, margin-bottom 0.05s, border 0.05s, padding 0.05s, top 0.05s, bottom 0.05s, width 0.05s, height 0.05s;
-}
-
-button:active {
-    border-bottom-width: 0px;
-    margin-top: 24px;
-}
-
-button:hover {
-}
-
 /* dragula-specific example page styles */
 .wrapper {
     display: grid;
