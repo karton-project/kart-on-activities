@@ -23,18 +23,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d864c7cd-bff8-4e8e-aaf8-75be132af7ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/learn-p5/activity/colors.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/learn-p5/activity/media/duck-art.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/learn-p5/activity/media/duck.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/learn-p5/activity/ordering.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/learn-p5/activity/p5-car.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/learn-p5/activity/pixelart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/learn-p5/activity/1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/learn-p5/activity/2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/learn-p5/activity/activity.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/learn-p5/activity/activity.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/learn-p5/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/learn-p5/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/activity/activity.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/activity/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/activity/colors.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/activity/drag.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/activity/excali/1.excalidraw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/activity/excali/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/activity/excali/1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/activity/excali/1_trs.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/activity/media/duck-art.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/activity/media/duck.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/activity/ordering.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/activity/p5-car.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/activity/pixelart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/activity/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/img/p5js-beta.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/media/dikdortgen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/media/doldur240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/media/doldur50.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/media/elips.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/p5-widget.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/vendor/codemirror.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/vendor/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/vendor/prism.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/learn-p5/vendor/prism.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +81,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/learn-p5/activity" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../kumbara-kodlama" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -180,7 +196,7 @@
       <workItem from="1634888528463" duration="1460000" />
       <workItem from="1634997169144" duration="12000" />
       <workItem from="1636358834738" duration="16465000" />
-      <workItem from="1636450802864" duration="16170000" />
+      <workItem from="1636450802864" duration="24308000" />
     </task>
     <servers />
   </component>
