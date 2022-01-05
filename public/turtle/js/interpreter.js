@@ -19,7 +19,7 @@ function addCodeInput(codeInput) {
 
 function parse(code_text) {
     let command = "";
-    let params = [];
+    let params = [""];
     if (code_text.indexOf("#") > 0) {
         let code_parts = code_text.split('#');
         command = code_parts[0];
