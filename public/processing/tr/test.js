@@ -114,3 +114,11 @@ addCodeInput("nokta # dokunx # 0");
 addCodeInput("nokta # dokunx # height");
 addCodeInput("şekli bitir");
 runP5Code();
+
+// variables
+addCodeInput("değişken # x # 200");
+addCodeInput("değişken # y # 100");
+addCodeInput("boyut # x # x");
+addCodeInput("konum # x # y");
+addCodeInput("elips");
+runP5Code();
