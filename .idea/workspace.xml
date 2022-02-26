@@ -23,6 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d864c7cd-bff8-4e8e-aaf8-75be132af7ba" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/public/mobile-p5/css/index.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/mobile-p5/idea/mobile-p5.excalidraw" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/mobile-p5/idea/mobile-p5.png" afterDir="false" />
@@ -41,6 +42,11 @@
       <change afterPath="$PROJECT_DIR$/public/mobile-p5/js/fuzzycomplete/js/fuzzycomplete.min.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/mobile-p5/js/fuzzycomplete/js/fuzzycomplete.min.js.map" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/mobile-p5/js/index.js" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/processing/tr/interpreter.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/processing/tr/interpreter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/processing/tr/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/processing/tr/test.js" afterDir="false" />
+>>>>>>> 29ed532a12eb144607ad7e17b2a966acdc642c94
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,8 +194,15 @@
       <workItem from="1636358834738" duration="16465000" />
       <workItem from="1636450802864" duration="24308000" />
       <workItem from="1639381657956" duration="906000" />
+<<<<<<< HEAD
       <workItem from="1641399477465" duration="85000" />
       <workItem from="1643706394800" duration="177000" />
+=======
+      <workItem from="1641399477465" duration="376000" />
+      <workItem from="1643648360113" duration="193000" />
+      <workItem from="1643648722583" duration="1486000" />
+      <workItem from="1643886646460" duration="584000" />
+>>>>>>> 29ed532a12eb144607ad7e17b2a966acdc642c94
     </task>
     <servers />
   </component>
@@ -210,16 +223,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/public/processing/tr/interpreter.js</url>
-          <line>102</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

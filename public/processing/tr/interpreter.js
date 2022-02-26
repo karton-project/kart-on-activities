@@ -125,6 +125,7 @@ function correctParams(params) {
     for (var i = 0; i < params.length; i++) {
         params[i] = params[i].toLowerCase().replace(/\s+/g, " ").trim();
         params[i] = params[i].replace("o", "0");
+        params[i] = params[i].replace("*", "x");
         params[i] = params[i].replace("s", "5");
         params[i] = params[i].replace("g", "9");
         params[i] = params[i].replace("b", "6");
