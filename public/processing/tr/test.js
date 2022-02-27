@@ -111,7 +111,7 @@ runP5Code();
 addCodeInput("doldur # 200");
 addCodeInput("şekle başla");
 addCodeInput("nokta # dokunx # 0");
-addCodeInput("nokta # dokunx # height");
+addCodeInput("nokta # dokunx # 500");
 addCodeInput("şekli bitir");
 runP5Code();
 
