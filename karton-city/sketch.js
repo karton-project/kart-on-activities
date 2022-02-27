@@ -1,5 +1,5 @@
 let school, home, tree, hq, yacht;
-let schoolX, schoolY, homeX, homeY, treeX, treeY, hqX, hqY, yachtX, yacthY, yachtTextX, yachtTextY;
+let schoolX, schoolY, homeX, homeY, treeX, treeY, hqX, hqY, yachtX, yachtY, yachtTextX, yachtTextY;
 let imageSize;
 let yOff = 0;
 let isSchoolX, isSchoolY, isHomeX, isHomeY, isHqX, isHqY;
@@ -20,7 +20,7 @@ function setup() {
   image(school, schoolX, schoolY, imageSize, imageSize);
   image(home, homeX, homeY, imageSize, imageSize);
   image(hq, hqX, hqY, imageSize, imageSize);
-  printTitle('KEŞİF PARKA HOŞ GELDİN!', width * 0.1, height * 0.1);
+  printTitle('HOŞ GELDİN!', width * 0.1, height * 0.1);
   printTitle('ÖĞRETMEN', schoolX + (imageSize / 2), schoolY + (imageSize / 2));
   printTitle('ÖĞRENCİ', homeX - (imageSize / 2), homeY + (imageSize / 2));
   printTitle('GELİŞTİRİCİ', hqX + (imageSize / 2), hqY + (imageSize / 2));
@@ -39,17 +39,17 @@ function printTitle(str, x, y) {
 }
 
 function setDimens() {
-  imageSize = width * 0.2;
+  imageSize = Math.min(width * 0.2, height * 0.2);
   schoolX = random(width * 0.08, width * 0.12);
-  schoolY = random(height * 0.24, width * 0.28);
+  schoolY = random(height * 0.24, height * 0.28);
   homeX = random(width * 0.66, width * 0.74);
-  homeY = random(height * 0.08, width * 0.12);
+  homeY = random(height * 0.08, height * 0.12);
   hqX = random(width * 0.27, width * 0.33);
-  hqY = random(height * 0.52, width * 0.58);
+  hqY = random(height * 0.52, height * 0.58);
   yachtX = random(width * 0.46, width * 0.54);
-  yachtY = random(height * 0.75, width * 0.85);
+  yachtY = random(height * 0.7, height * 0.8);
   yachtTextX = yachtX - imageSize;
-  yachtTextY = yachtY + (imageSize / 2);
+  yachtTextY = yachtY + (imageSize *0.7);
 }
 
 function forest() {
@@ -92,8 +92,6 @@ function drawYacht() {
     yachtY += random(-2, 2);
   }
   image(yacht, yachtX, yachtY, imageSize, imageSize);
-  fill(20, 11, 143);
-  stroke(20, 11, 143);
   text('TÜM İÇERİĞİ GÖR', yachtTextX, yachtTextY);
 }
 

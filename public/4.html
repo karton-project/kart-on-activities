@@ -25,214 +25,83 @@
 <body>
 <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
 <google-codelab codelab-gaid="" id="" title="Yönergeler ve Kart-ON'a Giriş" environment="web" feedback-link="">
-    <google-codelab-step label="Yönergeler ile Çizim Yapma" duration="0">
 
-        <p class="image-container"><img style="width: 624.00px" src="img\58196081dbdb3d96.png"></p>
-        <p>
-            <strong>Sadece, nokta, çizgi, üçgen, kare, dikdörtgen, çember ve elips şekillerinden yararlanarak, yukarıdaki şekillerden birini anlatabilir misin?</strong>
-        </p>
-        <p>Örneğin aşağıdaki şekil için şöyle bir anlatım yapılabilir:</p>
-        <p class="image-container"><img style="width: 202.36px" src="img\6ab76506e90f4f6e.png"></p>
-        <ul>
-            <li>Sayfanın üst kısmının tam ortasına küçük bir çizgi çekelim.</li>
-            <li>O çizginin altına gelen ve ortasına hizalanmış bir dikdörtgen çizelim.</li>
-            <li>Dikdörtgenin içine iki tane yan yana içi dolu daire çizelim.</li>
-            <li>Bu dikdörtgenin altından başlayarak, içi dolu bir kare çizelim</li>
-            <li>Karenin iki yanına karenin yüksekliğine sahip bir elips çizelim.</li>
-            <li>Karenin altına, yan yana iki küçük kare çizelim.</li>
-            <li>Son çizdiğimiz karelerin altına, benzer boyutlarda iki yuvarlak çizelim.</li>
-        </ul>
-        <p><strong>Bu anlatımı daha detaylı nasıl yapabilirdik? </strong></p>
+    <google-codelab-step label="Programlama Ortamının Temel Yapısı" duration="0">
+        <p>KartON, yazıcıdan çıktı alarak kullanabileceğimiz programlama kartları ve telefon yardımı ile temel şekilleri kullanarak çizim ve animasyon yapmamıza yardımcı olan bir programlama ortamıdır. Programlama dilini tasarlarken, bilgisayar kullanmadan
+            birçok insanın bir arada üstüne çalışabileceği bir dil yaratmayı hedefledik.</p>
+        <aside class="special">
+            <p><strong>KartON ile çalışırken, ilk olarak komut çıktılarını almanız gerekir. Komut çıktılarını aşağıdaki linkte paylaştığımız dökümandan bulabilirsiniz:</strong></p>
+            <p><strong>İngilizce Komutlar: </strong><a href="https://drive.google.com/open?id=19uF689MTP5W6_eaGrChMvi9L4nXdidtI9xrT4jx17as" target="_blank">https://drive.google.com/open?id=19uF689MTP5W6_eaGrChMvi9L4nXdidtI9xrT4jx17as</a></p>
+            <p><strong>Türkçe Komutlar:</strong></p>
+            <p><a href="https://drive.google.com/open?id=1nZZvVZRh2mWjt1-rr5pIkS1LOyEHu3qknEIhZqk4vZk" target="_blank">https://drive.google.com/open?id=1nZZvVZRh2mWjt1-rr5pIkS1LOyEHu3qknEIhZqk4vZk</a></p>
+        </aside>
+        <p><strong>Kod Saati - Flappy Bird Uygulaması</strong></p>
+        <p>Kart-ON blokları ile bir kod saati uygulaması gerçekleştirmek istersen, uygulama içindeki Flappy Bird Aktivitesini tamamlayabilirsiniz. Kod saati için özel geliştirilen blokları ve dersi görmek için:</p>
+        <p><a href="https://drive.google.com/open?id=1PkXaD4wj2l1NreFuEj54EruXDGkeJ9xr_1M4uzyD6h0" target="_blank">https://drive.google.com/open?id=1PkXaD4wj2l1NreFuEj54EruXDGkeJ9xr_1M4uzyD6h0</a></p>
+        <p>Karton bloklarının çıktılarını alıp, komutları kestikten sonra, ilk uygulamızı oluşturabiliriz. KartON uygulaması üzerinde oluşturabileceğimiz en basit uygulama herhangi bir basit şekil komutunu çalıştırmaktır. </p>
+        <p>Örneğin, ekranımızda bir elips görmek istiyoruz:</p>
+        <p class="image-container"><img style="width: 341.00px" src="img/f05b421b94c5308c.png"></p>
+        <p>Ama bu <strong>elips </strong>komutunu kullanarak farklı boyutta ve farklı bir konumda bir elips çizebilir miyiz? Bunun için <strong>boyut</strong> ve <strong>konum</strong> komutlarını <strong>elips</strong> komutundan önce belirtmemiz gerekir.</p>
+        <p class="image-container"><img style="width: 341.00px" src="img/299cf6e025b3591c.png"></p>
+        <p class="image-container"><img style="width: 341.00px" src="img/c09f18264b7eaa69.png"></p>
+        <p>Eğer bu komutları kullanmadan, sadece elips komutunu çalıştırırsak, merkezi yatay 100, düşey 100 ekseninde olan 50 birim çapında bir elips otomatik olarak çizilir.</p>
+        <p>Eğer elipsin farklı bir renkte olmasını istiyorsak, yine <strong>elips</strong>ten önce <strong>doldur</strong> komutunu kullanmamız gerekir.</p>
+        <p class="image-container"><img style="width: 341.00px" src="img/fa7fc150ca5d5ced.png"></p>
+        <p><strong>doldur</strong> komutunun tek girdisi HSL renk tanımındaki H (hue), yani renk tonudur. 0 ile 360 arasında değer alır.</p>
 
 
     </google-codelab-step>
 
-    <google-codelab-step label="Kart-ON: Çizim Programlama Kartları" duration="0">
-
+    <google-codelab-step label="Dilin Amacı ve Yapısı" duration="0">
         <p>Kodlama, bilgisayar veya telefon gibi cihazların önceden tanımlanmış komutlar sayesinde, belirli bir görevi gerçekleştirmesidir. </p>
         <p>Bu görev, bir mobil uygulama tasarlamak, bir animasyon yaratmak veya çizim yapmak olabilir.</p>
-        <p>Kart-ON blokları ile çizim ve animasyonlar tasarlayabiliriz.</p>
-        <p>Bu blokları kullanırken, temel geometrik kavramları bilmek faydalı olacaktır.</p>
+        <p>KartON dilini geliştirmemizin üç amacı vardı:</p>
+        <ul>
+            <li>Çizim, animasyon ve hikayeler için özelleşmiş bir dil olması,</li>
+            <li>Takım halinde çalışmayı desteklemesi,</li>
+            <li>Eğlenceli ve öğretici olması</li>
+        </ul>
+        <p>KartON dili şu an için 32 adet komuta sahiptir. Bu komutlar sayesinde, çizim yapabilir, müzik oluşturabilir veya nesneleri hareket ettirebilirsiniz. Komutlar, programlamaya yeni başlayan öğrenciler için tasarlanmıştır.</p>
+
+
+    </google-codelab-step>
+
+    <google-codelab-step label="Kart-ON Blokları ile Araba Çizmek" duration="0">
+        <p>Kodlama dilimizin amacı, çizim yapmak ve animasyon oluşturmak ise, temel çizim ve geometri kavramlarını hatırlamak yardımcı olacaktır</p>
+        <p>.<img style="width: 376.00px" src="img/ec16f3052259ab4.png"></p>
         <p><strong>Koordinat Sistemi:</strong></p>
-        <p class="image-container"><img style="width: 376.00px" src="img\9efc088f5c34d1f9.png"></p>
         <p>Çizim yapmak için bir sistem geliştiriyorsak, temel şekilleri nasıl tanımlayacağımızı belirlememiz gerekir. Koordinatlar ile çalışmak, bir düzlem üzerinde çizimi yapılacak şekillerin konumunu belirleyeceğimiz bir sistemdir. </p>
         <p>Sağdan sola giden doğru <strong>X doğrusu </strong>olarak adlandırılır.</p>
         <p>Yukarıdan aşağı giden doğru <strong>Y doğrusu</strong> olarak adlandırılır.</p>
         <p>Kullanacağımız koordinat sistemindeki her bir nokta, bilgisayar ekranının piksellerine denk gelir. Yukarıdaki şekildeki siyah nokta, en üst-soldaki pikseldir. </p>
-
-
     </google-codelab-step>
 
-    <google-codelab-step label="Kart-ON ile dikdörtgen çizmek:" duration="0">
-
-        <p>Kart-ON programlama kartlarında çizim yapmak için açık yeşil renkteki temel şekil kartlarını kullanabiliriz. Eğer bir dikdörtgen çizmek istiyorsak
-            <strong>rect</strong> komutunu telefonumuza okutmamız yeterlidir: </p>
-        <p class="image-container"><img style="width: 624.00px" src="img\c06e88e5f167a6c4.png"></p>
-        <p>
-            <strong>rect, </strong>dikdörtgenin İngilizcesi olan &#34;rectangle&#34; kelimesinin kısaltmasıdır. Bu komut dört adet girdi alır: X ve Y eksenlerindeki konumu. X ve Y eksenlerine yazdığımız bu nokta, dikdörtgenin tam orta noktasını gösterir:
-        </p>
+    <google-codelab-step label="Kart-ON ile Araba Çizmek:" duration="0">
+        <p>Kart-ON programlama kartları ile bir araba çizmek istersek, üç temel şekil ile bu programı hazırlayabiliriz:</p>
         <table>
             <tr>
-                <td colspan="1" rowspan="1"><p>0</p>
+                <td colspan="1" rowspan="1">
+                    <p class="image-container"><img style="width: 194.00px" src="img/eb9fa2a3a01b1288.png"></p>
                 </td>
-                <td colspan="1" rowspan="1"><p>20</p>
+                <td colspan="1" rowspan="1">
+                    <p class="image-container"><img style="width: 194.00px" src="img/acd20c67460a51e0.png"></p>
                 </td>
-                <td colspan="1" rowspan="1"><p>40</p>
-                </td>
-                <td colspan="1" rowspan="1"><p>60</p>
-                </td>
-                <td colspan="1" rowspan="1"><p>80</p>
-                </td>
-                <td colspan="1" rowspan="1"><p>100</p>
-                </td>
-                <td colspan="1" rowspan="1"><p>120</p>
-                </td>
-                <td colspan="1" rowspan="1"><p>140</p>
-                </td>
-                <td colspan="1" rowspan="1"><p>160</p>
-                </td>
-                <td colspan="1" rowspan="1"><p>180</p>
-                </td>
-                <td colspan="1" rowspan="1"><p>200</p>
-                </td>
-                <td colspan="1" rowspan="1"><p>220</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1"><p>20</p>
-                </td>
-                <td colspan="11" rowspan="11"><p class="image-container"><img style="width: 558.00px"
-                                                                              src="img\4de68530c815d77a.png"></p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1"><p>40</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1"><p>60</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1"><p>80</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1"><p>100</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1"><p>120</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1"><p>140</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1"><p>160</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1"><p>180</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1"><p>200</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1"><p>220</p>
+                <td colspan="1" rowspan="1">
+                    <p class="image-container"><img style="width: 194.00px" src="img/648ae2d3d37feba5.png"></p>
                 </td>
             </tr>
         </table>
-        <p>Çizdiğimiz karenin altına iki yuvarlak da eklersek, basit bir arabayı çizmeyi başarabiliriz: Yuvarlak çizmek için
-            <strong>ellipse</strong> komutunu kullanabiliriz. Tıpkı dikdörtgende olduğu gibi,
-            <strong>width </strong>(genişlik) ve
-            <strong>height </strong>(yükseklik) girdilerini eşitlersek, bir çember elde etmiş oluruz.</p>
-        <p class="image-container"><img style="width: 624.00px" src="img\2aaaec24c556f60a.png"></p>
-        <p class="image-container"><img style="width: 624.00px" src="img\b8bda40fa14418bc.png"></p>
-        <table>
-            <tr>
-                <td colspan="1" rowspan="1"><p>0</p>
-                </td>
-                <td colspan="1" rowspan="1"><p>20</p>
-                </td>
-                <td colspan="1" rowspan="1"><p>40</p>
-                </td>
-                <td colspan="1" rowspan="1"><p>60</p>
-                </td>
-                <td colspan="1" rowspan="1"><p>80</p>
-                </td>
-                <td colspan="1" rowspan="1"><p>100</p>
-                </td>
-                <td colspan="1" rowspan="1"><p>120</p>
-                </td>
-                <td colspan="1" rowspan="1"><p>140</p>
-                </td>
-                <td colspan="1" rowspan="1"><p>160</p>
-                </td>
-                <td colspan="1" rowspan="1"><p>180</p>
-                </td>
-                <td colspan="1" rowspan="1"><p>200</p>
-                </td>
-                <td colspan="1" rowspan="1"><p>220</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1"><p>20</p>
-                </td>
-                <td colspan="11" rowspan="11"><p class="image-container"><img style="width: 558.00px"
-                                                                              src="img\5dfb8ac2bca7da7c.png"></p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1"><p>40</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1"><p>60</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1"><p>80</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1"><p>100</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1"><p>120</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1"><p>140</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1"><p>160</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1"><p>180</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1"><p>200</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1"><p>220</p>
-                </td>
-            </tr>
-        </table>
-        <p>İki elips komutunu da programa eklediğimizde, basit bir araba çizmiş oluruz.</p>
+        <p>Çizdiğimiz diködrtgenin konumlarını belirttiğimizde, girdi olarak belirttiğimiz sayılar, bu dikdörtgenin sol üst başlangıç noktası konumlarını belirtir. Elips komutunda ise bu konumlar elipsin orta noktasıdır.</p>
+        <p>Tüm şekillerin aynı renk olmasını istiyorsak, <strong>doldur </strong>komutunu tüm şekilleri çizmeden önce belirtmemiz yeterlidir.</p>
+        <p class="image-container"><img style="width: 276.00px" src="img/30438bb9f0397e0d.png"></p>
+        <p>Sonuç olarak, Kart-ON uygulamasında aşağıdaki gibi bir çıktı görürüz.</p>
+        <p class="image-container"><img style="width: 392.50px" src="img/a906d0f831db020b.png"></p>
 
 
     </google-codelab-step>
 
 </google-codelab>
+
 
 
 <script src="./libraries/codelab/native-shim.js"></script>
