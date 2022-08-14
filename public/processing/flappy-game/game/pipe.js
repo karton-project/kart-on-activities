@@ -19,13 +19,13 @@ class Pipe {
 
     generateFirst() {
         const { height, gap } = this.generatePipeHeightAndGap();
-        this.pipesPosition.push({ offset: -300, height, gap });
-        this.draw({ offset: -300, height, gap });
+        this.pipesPosition.push({ offset: -100, height, gap });
+        this.draw({ offset: -100, height, gap });
     }
 
     draw() {
         this.pipesPosition.forEach(pipe => {
-            this.p5.image(this.image, CANVAS_WIDTH - pipe.offset, 0, PIPE_WIDTH, pipe.height, PIPE_WIDTH, 500 - pipe.height, PIPE_WIDTH, pipe.height);
+            this.p5.image(this.image, CANVAS_WIDTH - pipe.offset, 0, PIPE_WIDTH, pipe.height, PIPE_WIDTH, CANVAS_HEIGHT - pipe.height, PIPE_WIDTH, pipe.height);
             this.p5.image(this.image, CANVAS_WIDTH - pipe.offset, pipe.height + pipe.gap, PIPE_WIDTH, CANVAS_HEIGHT - pipe.height - pipe.gap - FLOOROFFSET, 0, 0, PIPE_WIDTH, CANVAS_HEIGHT - pipe.height - pipe.gap - FLOOROFFSET);
         });
     }

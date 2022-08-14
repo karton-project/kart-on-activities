@@ -1,5 +1,4 @@
 const sketch = p5 => {
-    let background = p5.loadImage('./assets/background.png');
     let spriteImage = p5.loadImage('./assets/sprite.png');
     let birdyFont = p5.loadFont('./assets/FlappyBirdy.ttf');
     let gameStart;
@@ -71,7 +70,7 @@ const sketch = p5 => {
     };
 
     p5.draw = () => {
-        p5.image(background, 0, 0);
+        p5.background("#70C5CE");
 
         if (gameStart && gameOver === false) {
             if(addPipe){
